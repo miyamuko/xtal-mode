@@ -1,0 +1,562 @@
+2008-07-12  MIYAMUKO Katsuyuki
+
+	* xtal-mode 0.0.5 released!
+
+	* ライセンスファイルを同梱
+
+2007-09-30  MIYAMUKO Katsuyuki
+
+	* xtal-mode 0.0.4 released!
+
+	* (*xtal-indent-level*): デフォルトを c-indent-level にした。
+
+	* (ix): *xtal-command-ix* が存在するかチェック
+	  (ix-console): ditto.
+
+2007-09-29  MIYAMUKO Katsuyuki
+
+	* (current-line-eval): gensym 化
+
+	* (current-line-indent): current-line-eval で goto-bol しているので goto-bol を削除
+
+	* (current-line-indent): バグっていたのを修正
+
+	* (xtal-electric-insert-close-parentheses): { を入力したときの動作を変更。
+	  - 以下の場所にカーソルを移動するようにした。
+	    n.times{■
+	    }
+	    以前はここだったけど、block parameter をとる場合に面倒なので修正。
+	    n.times{
+	        ■
+	    }
+	  - 対応する閉じ括弧があり、インデントレベルが同じなら閉じ括弧を挿入しないようにした。
+
+	* (matched-close-parentheses-exist-p): インデントレベルが同じな対応する閉じ括弧があるなら t
+
+2007-09-10  MIYAMUKO Katsuyuki
+
+	* xtal-mode 0.0.3 released!
+
+2007-09-09  MIYAMUKO Katsuyuki
+
+	* (xtal-electric-string): " を連続して 2 回入力すると """ 担ってしまう問題を修正
+
+	* (*xtal-electric-insert-close-string*): xtal-electric-string の制御
+	  (xtal-electric-string): *xtal-electric-insert-close-string* が t のときのみ閉じる。
+
+	* (xtal-electric-string): 文字列を自動で閉じるようにした。
+
+	* - (xtal-electric-insert-close-parentheses): revert 1647
+	    既に閉じ括弧がある場合でも常に閉じる。
+	    以下のようになるのを防ぐため。
+	    foo {
+	      if {
+	    }
+	    括弧の対応を見てバンランスしていないのなら挿入すればいけるが、
+	    全体のバランスを見ないと駄目。面倒なので常に挿入する。
+
+	* - (xtal-electric-insert): 開き括弧を入力し時点で後ろに何かあれば自動挿入はしない。
+	    1 + 2  全体を () でくくりたいときに勝手に閉じられると困る。
+	  - (xtal-electric-insert-close-parentheses): 既に閉じ括弧がある場合はなにもしない。
+
+	* (*xtal-electric-insert-close-parentheses*): 閉じ括弧の挿入を制御する
+	  (xtal-electric-insert, xtal-electric-close): *xtal-electric-insert-close-parentheses* が t の場合のみ閉じ括弧を挿入
+
+	* (xtal-electric-insert): 対応する閉じ括弧を自動的に挿入するようにした。
+	  (xtal-electric-close): ditto.
+
+	* (xtal-current-statement-points): 行頭・行末で実行したときに変だったのを修正
+	  (xtal-transpose-statement): ditto
+
+	* 古い ix を使った場合にプロンプト待ちで固まらないように修正
+	  - (ix-push-line-exist?): save したコマンドが存在するなら t
+	  - (ix-wait-for-prompt): timeout に 2 秒に変更
+	  - (ix-send-input): save したコマンドが存在する場合のみプロンプトを待ち合わせ
+	  - (*ix-send-input-guard*): いらない変数を削除
+
+	* - 0.0.3 で追加したコマンドの説明を追加。
+	  - ix-mode の説明を追加。
+
+	* (*xtal-ix-buffer-name*): ix のバッファ名を設定可能にした。
+
+	* (xtal-mode): mode name 変更: xtal => Xtal.
+
+	* - Bumped version number to 0.0.3
+	  - mail address, url を修正
+
+	* (xtal-current-scope-level): ) は扱わないようにした。
+
+	* (scan-xtal-syntax): match-data を保存
+	  (xtal-current-scope-level): ) を skip。
+	  (scan-eos-forward, scan-eos-backward): ditto.
+	  (xtal-current-statement-points): workaround を revert (svn merge -r1555:1552 outline.l)
+	  以下のバグを修正。
+	  - C-M-f で ); に移動してしまう
+	  - 最後の ); がマークできない (とりあえず直した)
+	          return expr.zip(rest.each).reduce(first, fun(r, pair) {
+	              // this.("and") で and メソッドが取得できる
+	              return this.(pair[0])(r, pair[1]);
+	          });
+	  - C-M-f で }) の ) に移動してしまう
+	  - (fun をマークすると } までしかマークされない （とりあえず直した)
+	          (fun (acc, rest) {
+	          })([], []);
+	  - up すると for の中に行く
+	          return fiber{
+	              for(i: 0; i<_gen; ++i){
+	                  sx, sy: supershape(_n, _m1, _m2, _m3, _phi);
+	                  sx *= _vel;
+	                  sy *= _vel;
+	                  _phi += _rot;
+	                  yield Ball(x + sx*5, y + sy*5, sx, sy);
+	              }
+	          }
+
+	* (ix): process ガ動作中でも ix-mode は実行するようにした。text-mode などに変えていても復帰できるように
+
+	* (setup-process-buffer): :kill nil が指定された場合は kill しない
+	  (buffer-process-running?): 指定されたバッファでプロセスが動いていればt
+
+	* (ix-mode): interactive にして export
+	  (ix-previous-history-or-virtual-line): 入力行でない場合は普通に移動するようにした。
+	  (ix-next-history-or-virtual-line): ditto.
+
+	* (marker-line-number): marker が nil なら -1 を返す
+
+	* (wait-for-process-terminate): ポーリング間隔変更: 0.2 => 0.1
+
+	* (ix-send-input0): 過去のコマンドラインを実行したときは現在行を push しておく。
+
+2007-09-08  MIYAMUKO Katsuyuki
+
+	* (ix-send-input0): 過去のプロンプトをコピーするのをやめてコマンドだけどコピー
+
+	* (*xtal-ix-window-height*): ix window の高さ
+	  (ix): ditto.
+	  (ix-wait-for-prompt): ix がクラッシュした場合に備えて proc の状態を常に確認
+	  (ix-prompt-reset): 全部消すようにした。
+	  (ix-history-previous): 最後までさかのぼった場合、最後のヤツをずっと表示
+
+	* (ix-backward-delete-char-untabify-or-selection): DEL
+	  (ix-prompt-line-p): プロンプト行なら t
+	  (ix-current-prompt-line-p): 現在の入力行なら t
+
+	* (ix-send-input0): 改行時に前の行の行末空白を削除。
+
+	* (ix-beginning-of-line-point-p): プロンプトを無視した bolp
+	  (ix-beginning-of-line-point): プロンプトを無視した行頭の point を返す
+	  (ix-beginning-of-line): rename from ix-goto-bol.
+	  (ix-backward-char): prompt を無視する backward-char
+
+	* (ix-forward-prompt): 行頭で ix-forward-prompt したときは次の行以降のプロンプトに移動すべき
+
+	* (ix-forward-prompt, ix-backward-prompt): 前後のプロンプトに移動
+
+	* (*ix-mode-hook*): ix-kill-buffer のキーを C-c 0 にした。
+
+	* (define-xtal-specific-mode-map): ix を C-c 1 に、ix-console を C-c ! にした。
+
+	* (*ix-prompt-regexp-color*): export.
+
+	* (ix-console): rename from xtal-run-ix-console.
+	  (ix): C-c C-i に割り当て
+
+	* (xtal-run-with-current-buffer, xtal-save-buffer-if-need): ファイルが保存されていなければ勝手に保存
+	  (buffer->filename, create-temp-buffer-file): utils.l から buffer.l に移動
+
+	* (ix-kill-buffer): window も閉じるようにした。
+
+	* (delete-buffer-and-window): xtal-close-output-buffer から抽出。
+	  (xtal-close-output-buffer): call delete-buffer-and-window
+
+	* (ix): window を分割して表示
+
+	* (setup-process-buffer): ix 用に共通部分を抽出
+	  (popup-to-output-buffer): ditto
+
+	* (*xtal-regexp-keyword-list*): 再利用可能なように compiled-regexp-list から list にした。
+	  (xtal-mode-setup-keyword): *xtal-regexp-keyword-list* をここで compile
+	  (*ix-prompt-regexp-color*): prompt の色
+	  (ix-mode): *xtal-regexp-keyword-list* に *ix-prompt-regexp* を追加して正規表現キーワードを設定
+
+	* (ix-goto-bol): 最後に出力した行なら process marker に移動。
+
+	* (marker-line-number): マーカの行番号を返す。
+
+	* (ix-push-current-line): M-q で現在の行を保存
+	  (ix-pop-line-and-insert): M-q で保存した行を挿入。ix-send-input の最後で呼ばれる
+	  (ix-wait-for-prompt): ix の prompt が出るまで待ち合わせる。process-filter は遅すぎて使えない
+	  (ix-send-input): prompt が出たら ix-pop-line-and-insert
+	  (make-ix-process): process.l から ix-mode.l に移動
+
+	* (timeout): timeout 付き loop
+
+	* (buffer-substring-and-delete): buffer-substring + delete-region.
+
+	* (ix): メニューから実行できるようにした。
+	  (xtal-run-ix-console): process.l から ix-mode.l に移動。
+
+	* (wait-for-process-terminate): プロセスが終了するまで待つ。
+	  (with-runnning-process): process が実行中なら body を実行
+
+	* (bol-point): 行頭の point を返す。
+	  (eol-point): 行末の point を返す。
+
+	* (reset-command-history-index): rename from reset-command-history
+
+	* (ix-history-previous): 履歴検索
+	  (ix-history-next): ditto
+
+	* (*ix-prompt-regexp*): 空白を含まないようにした
+	  (ix-goto-bol): prompt の先頭に移動する。(C-a)
+
+	* (ix-mode): ix-mode 時にキーワードに色を付けるようにした。
+
+	* (buffer-ix-mode-p): ix-mode なら t
+	  (ix-kill-buffer): ix を止めてから kill-buffer (C-c C-k)
+	  (ix-send-interrupt): ix の終了を待ち合わせるようにした。
+
+	* add ix-mode.
+
+2007-09-01  MIYAMUKO Katsuyuki
+
+	* (*xtal-command-ix*): rename from *ix-exe*
+	  (*xtal-command-xtal*): rename from *xtal-exe*
+
+	* (xtal-run-ix-console): ix を外部で実行
+
+	* (xtal-workaround-insert-local-menu-again): buffer が xtal-mode のときのみメニューを設定
+
+	* ショートカットが cmd と explorer で逆になってた。
+
+	* (xtal-open-install-path-by-explorer): format していなかったエラーを修正
+
+	* (xtal-workaround-insert-local-menu-again): xtal-menu が current-menu 内に存在する場合はなにもしない。
+
+	* - svn-mode がローカルメニューを無視して xtal-mode のメニューがつぶされてしまう問題の workaround.
+
+	* (xtal-open-install-path-by-command-prompt): Xtal インストールパスをコマンドプロンプトで開く
+	  (xtal-open-install-path-by-explorer): Xtal インストールパスをエクスプローラで開く
+
+	* - (*xtal-exe*): config.l に移動。defvar 化。
+	  - (*ix-exe*): ditto.
+	  - path かんれんの処理を process.l から path.l に移動
+
+	* (xtal-ensure-command): file-exist-p を呼ぶのなら valid-path を呼ぶ必要はない
+
+	* (*xtal-install-path-cache*): install path をキャッシュしないようにした。
+	  (xtal-install-path): ditto.
+	  (xtal-bin-path): xtal 0.9.7 higher で exe が bin ディレクトリに置かれるようになったので対応
+
+2007-08-26  MIYAMUKO Katsuyuki
+
+	* - M-C-f, M-C-b は潰さないようにした。
+	  - M-C-n, M-C-p を xtal-xxx-statement にした。
+	  - M-C-j, M-C-k を xtal-xxx-statement-in-scope にした。
+
+	* (xtal-transpose-statement): 文と文の間ではないならデフォルトの transpose-sexps を呼ぶ
+
+	* (xtal-current-statement-points):  (fun をマークすると } までしかマークされない
+	    (fun (acc, rest) {
+	    })([], []);
+
+	* (fixup-calc-c-indent): fixed typo...
+
+	* (looking-eos-backward): () も見るようにしてみた。workaround.
+	  (looking-eos-forward): ditto.
+	  (xtal-current-statement-points): 以下のようなケースで ); が残ってしまうことに対する workaround
+	    [1,2,3].inject(0, fun(acc,e) {
+	        e + acc;
+	    });
+
+	* (xtal-transpose-statement): if と else if に関しては特別に入れ替え処理をする
+
+	* カーソル移動系のコマンドをメニューに設定。
+	  カーソル移動系のコマンドにキーマップ定義。
+
+	* 以下の関数を export
+	  xtal-forward-statement
+	  xtal-backward-statement
+	  xtal-forward-statement-in-scope
+	  xtal-backward-statement-in-scope
+	  xtal-mark-statement
+	  xtal-transpose-statement
+	  xtal-up-statement
+	  xtal-down-statement
+
+	* (xtal-transpose-statement): 前後の文を入れ替える。
+
+	* (xtal-current-statement-points): カーソルがある文の開始と終了 point を多値で返す。
+	  (xtal-mark-statement): カーソルがある文をマークする。
+
+	* (xtal-down-statement): refactoring. rename variables.
+
+	* (xtal-down-statement): 現在のスコープにネストした開き括弧内に移動する。
+
+	* (xtal-current-scope-level): レベルの高い順になっているので reverse する必要はない。
+	  (xtal-up-statement): ひとつ上のスコープに移動。
+
+	* (xtal-current-scope-level): トップレベルの point だけではなくすべての { の point を返すようにした。
+	    完全に同じスコープかどうか判断するため。
+	  (xtal-forward-statement-in-scope): 完全に同じスコープの同レベルの次の文に移動する。
+	  (xtal-backward-statement-in-scop): 完全に同じスコープの同レベルの前の文に移動する。
+	  (xtal-move-statement-in-scope): 共通関数。
+
+	* (cursor-moved?): cursor-moved? block を作るようにした。
+	  (scan-eos-backward): [{};]を探す。
+	  (xtal-forward-statement-in-scope): 候補がなければカーソルを移動しないようにした。
+	  (xtal-backward-statement): 文を後ろに移動する。
+
+	* (*-sentence): => *-statement.
+	  (xtal-forward-statement): ファイルの先頭で実行するとひとつ飛ばされていたのを修正。
+	  (xtal-forward-statement-in-scope): 同じスコープ内でのみ移動する。
+	  (xtal-current-scope-level): スコープのネストのレベルとトップレベルの point を返すようにした。
+	  (scan-eos-forward): [{};] を探す
+	  (looking-eos-backward): ditto
+	  (looking-eos-forward): ditto
+	  (skip-for-eos): コメント、空白、ブロック引数を無視。
+
+	* (xtal-forward-sentence): block parameter を無視するようにした。
+
+	* (xtal-skip-white-spaces-or-comment-{backward|forward}): use xtal-skip-syntax-{backward,forward}
+
+	* (xtal-skip-syntax): 指定された引数に対応する関数のいずれかが成功する間連続して呼び出す。
+	  (xtal-skip-syntax-forward): ditto
+	  (xtal-skip-syntax-backward): ditto
+
+	* (make-string): Ｓ式のリストから文字列を作成
+	  (symbol-join): 文字列を join してシンボルを作成
+
+	* (skip-white-spaces-*): xtal- prefix を付けた。
+
+	* (skip-block-parameter-forward): |a,b| をスキップする。
+	  (skip-block-parameter-backward): ditto
+	  (fixup-calc-c-indent): use skip-block-parameter-backward.
+
+2007-08-25  MIYAMUKO Katsuyuki
+
+	* (scan-xtal-syntax): parse-point-syntax しながら scan-buffer する。
+	  (xtal-current-scope-level): 現在の { のネストレベルを取得する。
+	  (xtal-forward-class-or-method): 次の関数またはクラスに移動する。現在のスコープより深いのは無視する。
+	  (xtal-forward-sentence): 次の文に移動する。スコープのレベルは気にしない。
+	  (scan-xtal-outline): *xtal-outline-regexp* で scan-buffer するマクロ。
+
+	* (xtal-skip-comment-forward): 行頭に文字列がある部分で実行すると無限ループになっていたのを修正。
+
+	* (save-current-point-only-if-fail): save-excursion を使うと goto-matched-parenthies がなんかうまく動かない？
+
+	* (*xtal-regexp-keyword-list*): ... を正規表現でキーワードにした。
+
+	* (xtal-parse-point-syntax): 第２引数で :string, :comment, :tag 以外のときに返す値を指定できるようにした。
+
+	* (skip-regexp): save-current-point-only-if-fail を使うようにした。
+
+	* (with-gensyms): gensym するマクロ。
+	  (save-current-point-only-if-fail): body が失敗したら point を復元するマクロ。
+
+2007-08-16  MIYAMUKO Katsuyuki
+
+	* 一時ファイルで実行した場合でも F10 で元のファイルを開けるようにした。
+	  (xtal-fixup-temp-file): 出力バッファ内の tempfile 名を書き換える。
+	  (xtal-process-sentinel-for-temp): tempfile 用の sentine. ファイルの削除と xtal-fixup-temp-file の実行。
+	  (xtal-setup-output-buffer): temp ファイルの場合は xtal-process-sentinel-for-temp を sentinel に設定。
+
+	* (with-temporary-set-buffer): 一時的に set-buffer するマクロ。
+	  (set-local-variable): 第２引数で buffer を取るようにした。
+
+	* (buffer->filename): tempfile かどうかを多値で返す
+
+	* (process-running?): process-status が :run なら t
+	  (xtal-kill-process): kill-process では cmd.exe しか死なない？ xtal.exe が残るので kill-subprocess にした。
+	  (xtal-close-output-buffer): バッファを閉じる前に実行中のプロセスを殺すようにした。
+
+	* (looking-regexp-forward): looking-at と同じ。
+	  (looking-regexp-backward): looking-for の正規表現版。
+
+	* (skip-regexp-backward): match data を保存するようにした。
+
+2007-08-14  MIYAMUKO Katsuyuki
+
+	* xtal-mode 0.0.2 released!
+
+	* (make-ix-process): とりあえず追加。
+
+	* (xtal-add-bookmark-menu): バージョンの上に指定されたファイル・URL を開くメニュー
+	  を追加する関数。
+
+	* (xtal-define-popup-menu): :sep にタグを付けた。タグをキーワードにした。
+
+	* (*xtal-mode-map*, *xtal-syntax-table*): define-key とかできるように
+	  require した時点で定義するようにした。
+
+	* stdin, stdout, stderr を追加
+
+	* xtal 0.9.7.1 のキーワードを追加
+
+2007-08-13  MIYAMUKO Katsuyuki
+
+	* xtal-mode 0.0.1 released!
+
+	* examples/fizzbuzz.xtal を追加。
+
+	* (xtal-close-output-buffer): window が 1 しかない場合にエラーになっていたのを修正。
+
+	* (xtal-install-path): エラーメッセージが不正だったのを修正。
+	  (xtal-ensure-command): コマンドの存在チェック。
+	  (xtal-run-with-current-buffer): コマンドが存在するか確認するようにした。
+
+	* export の整理、ユーザが定義する変数を defvar にした。
+
+	* (xtal-indent-buffer): メッセージを表示。
+	  (xtal-smart-comment-indentation): 既にインデントしているコメント中でさらに
+	  TABを押すと*が増殖するのを修正。
+
+	* xtal への関連付けは ni-autoload でのみ行う。デフォルトではしない。
+
+	* dofun はタグや list-function の対象にしない。
+
+	* (xtal-build-summary-of-functions): ひとつもないときは error
+	  にしないと、list-function 内でエラーになってしまう。
+
+	* バイトコンパイルできなかったのを修正。
+
+	* xtal の実行結果バッファにもメニューを付ける
+
+	* (*xtal-create-output-buffer-hook*): output buffer を作ったときに呼ばれるフック。
+	  (*xtal-before-run-xtal-hook*): make-process 前に呼ばれるフック
+	  (*xtal-run-xtal-hook*): make-process の直後に呼ばれるフック
+	  (*xtal-after-run-xtal-hook*): process が終了したときに呼ばれるフック
+	  (xtal-process-sentinel): process sentinel
+	  (xtal-setup-output-buffer): *xtal-create-output-buffer-hook* フックを実行。
+	  コマンドが実行中のときに buffer が変わっていたのを修正
+	  (xtal-run-with-current-buffer): *xtal-*-run-xtal-hook* を実行n
+
+	* (xtal-close-output-buffer): window を表示している場合閉じるようにした。
+
+	* F10 に xtal-first-error を定義。
+
+	* (find-xtal-output-buffer): xtal の実行バッファを返す。
+	  (xtal-first-error): xtal の実行バッファに移って first-error する。
+
+	* 閉じコメントを正しく検出するようにした。
+
+	* (*multi-line-comment-regexp*): /* と */ にマッチする正規表現
+	  (goto-matched-multi-line-comment): 対応するコメントの開始・終了に移動する
+	  (goto-beginning-of-multi-line-comment): /* に移動
+	  (goto-end-of-multi-line-comment): */ に移動
+	  (goto-multi-line-comment0): ditto
+	  (regexp-matched-point): 対応する正規表現に移動する。
+
+	* (looking-around): カーソル周辺から指定された文字列を探す。
+	  looking-for と looking-back をあわせたようなもの。
+
+	* コメント内でのインデントで * を補正するようにした。
+
+	* (insert-chars-if-not): 指定された文字が存在しなければ insert
+
+	* command.l を削除。command は各ファイルで定義するようにした。
+
+2007-08-12  MIYAMUKO Katsuyuki
+
+	* (xtal-indent-buffer): バッファ全体をインデント。
+
+	* 以下のコマンドを追加。
+	  - 現在行をコメントアウト
+	  - 現在行のコメント解除
+	  - コメントをトグル
+
+	* (with-narrowing): save-excursion -> save-restriction -> narrow-to-region
+	  するマクロ。
+
+	* (current-line-point-values): 現在行の開始と終了 point を多値で返す。
+	  (current-line-points): 現在行の開始と終了 point を list で返す。
+	  (beginning-of-line-point): 指定された point 行の先頭 point を返す。
+	  (end-of-line-point): 指定された point 行の終了 point を返す。
+
+	* (current-line-points, with-current-line-points): new method.
+
+	* キーワードファイルにクラスのメソッドを追加。
+
+	* (xtal-setup-output-buffer): コマンド実行中ならとめてから実行するようにした。
+	  (xtal-close-output-buffer): 追加。
+
+	* 継続行をインデントするようにした。
+
+	* ブロックパラメータつきのブロックを正しくインデントできるようにした。
+	  arr.each {|e|
+	  }
+
+	* (*xtal-comment-start-regexp*): コメント開始正規表現
+	  (*xtal-comment-end-regexp*): コメント終了正規表現
+	  (*xtal-comment-line-regexp*): コメント行の正規表現
+	  (xtal-in-shebang-comment-p): bug fix.
+	  (xtal-in-comment-p): ditto.
+	  (xtal-parse-point-syntax): dito.
+	  (xtal-comment-line-p): add.
+	  (xtal-skip-comment-forward): 連続するコメントをスキップするようにした。
+	  (xtal-skip-comment-backward): ditto.
+	  (xtal-skip-comment): ditto.
+	  (skip-white-spaces-or-comment-forward): 連続するコメントと空白をスキップ
+	  (skip-white-spaces-or-comment-backward): ditto.
+
+	* (after-char=): 一文字あとを調べる。
+	  (skip-regexp-forward): 正規表現にマッチした分だけ進む。
+	  (skip-regexp-backward): 最短マッチになってしまうのを修正。
+
+	* (*xtal-block-parameter-regexp*): |ident,ident|にマッチする正規表現
+	  (skip-white-spaces-forward): 空白無視
+	  (skip-white-spaces-backward): ditto
+	  (skip-regexp-backward): 正規表現でスキップ
+	  (before-char=): 一つ前の文字チェック
+	  (space-line-p): 空白行?
+
+	* (re-group, re-repeat-with): new regexp helper.
+
+	* (xtal-skip-comment): cursor-moved? を利用、スキップする正規表現を指定するようにした。
+	  (xtal-skip-comment-forward): */ or \n までスキップするようにした。
+
+	* (cursor-moved?): body を実行してカーソルの位置が変われば t
+
+	* (narrow-to-line, current-line-eval, scan-line): カーソルの移動を制御する引数を追加。
+	  (looking-bol, current-line-indent): follow above changes.
+
+	* #! コメントに対応。
+
+	* (xtal-in-shebang-comment-p): #! コメントか判断
+	  (xtal-in-comment-p): コメント内？
+	  (xtal-parse-point-syntax): #! 対応 parse-point-syntax
+	  (xtal-skip-comment-forward): コメント外へ移動
+	  (xtal-skip-comment-backward): ditto
+	  (xtal-skip-comment): ditto
+
+	* menu にタグを付けた
+
+2007-08-11  MIYAMUKO Katsuyuki
+
+	* home url, online reference を開くメニューを追加。
+
+	* (xtal-command-line): filename が nil の場合は無視するようにした。
+	  必要なときだけ、qutoe するようにした。
+
+	* カレントバッファを xtal で実行を追加。
+
+	* menu からバージョン表示に対応した。
+
+	* app menu ではなく local menu とすべき。
+
+	* version.l を追加
+
+	* indent を calc-c-indent ベースで書き直し。
+
+	* ファイルを分割した。
+
+2007-08-10  MIYAMUKO Katsuyuki
+
+	* タグ、list-function、indent 周りを実装
+
+	* キーワード定義
+
+2007-08-09  MIYAMUKO Katsuyuki
+
+	* xtal-mode 作成開始
+

@@ -1,0 +1,26 @@
+package: xtal-mode
+version: 0.0.5
+
+sources:
+  include:
+    - site-lisp/xtal-mode/**/*.l
+  exclude:
+    - site-lisp/xtal-mode/**/tests/*.l
+    - site-lisp/xtal-mode/**/examples/*.l
+
+document:
+  - site-lisp/xtal-mode/docs/README.rd
+
+files:
+  include:
+    - etc/*
+    - site-lisp/**/*.l
+    - site-lisp/**/*.lc
+    - site-lisp/xtal-mode/lib/*.dll
+    - site-lisp/xtal-mode/examples/**/*.*
+    - site-lisp/xtal-mode/docs/**/*
+    - site-lisp/xtal-mode/docs/**/*.*
+    - site-lisp/xtal-mode/src/**/*.*
+  exclude:
+    - site-lisp/xtal-mode-scratch.l
+    - site-lisp/xtal-mode/tests/*.*
