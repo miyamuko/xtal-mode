@@ -414,7 +414,7 @@ xtal-mode パッケージからは以下の変数・関数を export しています。
 
 === FUNCTION
 
---- xtal-add-bookmark-menu tag name file-or-url
+--- xtal-add-bookmark-menu tag name uri-or-command
 
     指定したファイルや URL を開くメニュー項目を Xtal メニューに追加する関数です。
 
@@ -422,15 +422,19 @@ xtal-mode パッケージからは以下の変数・関数を export しています。
 
     * tag にはメニュー項目をあとから識別できるようにする値を指定します。nil でもかまいません。
     * name にはメニューに表示する名前を指定します。
-    * file-or-url にはファイルパスまたは URL を文字列で指定します。
-      file-or-url は shell-execute で実行されます。
+    * uri-or-command には文字列またはコマンドを指定します。
+      * 文字列を指定した場合は shell-execute で実行します。
+      * コマンドを指定した場合はそのコマンドを引数なしで実行 (funcall) します。
 
     例:
 
         ;; Xtgl の HTML ヘルプをメニューに追加。
         ;; xtal.chm は xtal.exe と同じ場所においておく。
         (xtal-add-bookmark-menu :chm "Xtal リファレンス (&C)"
-                                (merge-pathnames "xtal.chm" *xtal-install-path*))
+                                #'(lambda ()
+                                    (interactive)
+                                    (let ((*html-help-path* (merge-pathnames "xtal.chm" (si:getenv "XTAL_HOME"))))
+                                      (show-html-help))))
 
 --- goto-matched-multi-line-comment
 
@@ -476,8 +480,8 @@ xtal-mode パッケージからは以下の変数・関数を export しています。
     それぞれの番号は必ず 1 桁にするので、以下のように比較することができます
 
         (if (string<= "1.1.0" (xtal-mode-version))
-            (1.1.0 以降で有効な処理)
-          (1.1.0 より前のバージョンでの処理))
+            '(1.1.0 以降で有効な処理)
+          '(1.1.0 より前のバージョンでの処理))
 
 
 == ix-mode
@@ -559,11 +563,10 @@ ix-mode では以下のキーが定義されています。
   * クラス名を明示した補完
 * HTML Help
   * ウィンドウ位置の保存
-  * キーワード検索
 * ソースの整理
   * 階層化
 * iterator のクラステンプレートの挿入
-  * iter_first, iter_next, iter_break
+  * block_first, block_next, block_break, block_catch
 * 複数の xtal の切り替え
   * menu
   * history
@@ -585,9 +588,6 @@ ix-mode では以下のキーが定義されています。
 
   : Xtal Language
         ((<URL:http://code.google.com/p/xtal-language/>))
-
-  : Xtal オンラインリファレンス
-        ((<URL:http://www.h5.dion.ne.jp/~putora/xtal_doc/>))
 
 
 == COPYRIGHT

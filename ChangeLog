@@ -4,6 +4,21 @@
 
 	* ライセンスファイルを同梱
 
+2008-03-21  MIYAMUKO Katsuyuki
+
+	* - xtal 0.9.9.0 のキーワードを定義
+	  - 古いキーワードを削除
+
+	* keyword ファイルを生成するスクリプトを追加。
+
+	* iter_x => block_x.
+
+	* - (xtal-add-bookmark-menu): 引数に関数を指定可能にした。
+	  - (xtal-define-popup-menu): *xtal-online-reference-url* を変更したらすぐに反映されるように
+	    open-url-command に渡す引数を変数名にした。
+
+	* (open-url-command): シンボル名を指定できるようにした。
+
 2007-09-30  MIYAMUKO Katsuyuki
 
 	* xtal-mode 0.0.4 released!

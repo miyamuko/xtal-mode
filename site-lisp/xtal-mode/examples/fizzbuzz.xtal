@@ -4,7 +4,7 @@ FizzBuzz: class {
 
     initialize: method(_n) {}
 
-    iter_first: method() {
+    block_first: method() {
         _f = fiber() {
             _n.times {
                 if (it % 15 == 0) {
@@ -22,7 +22,7 @@ FizzBuzz: class {
         return _f();
     }
 
-    iter_next: method() {
+    block_next: method() {
         return _f();
     }
 }

@@ -1,0 +1,67 @@
+str_start_with: method(str, sub) {
+    return str.take(sub.length).to_a == sub.to_a;
+}
+
+any: method(iter, fn) {
+    iter.each {
+        if (fn(it)) {
+            return true;
+        }
+    }
+    return false;
+}
+
+uniq: method(iter) {
+    seen: Map();
+    return fiber() {
+        iter.each {
+            if (!seen[it]) {
+                yield it;
+                seen[it] = true;
+            }
+        }
+    }
+}
+
+is_inherited_member: method(member, type, name) {
+    return !(%f"%s::%s"(type, name) == member.to_s);
+}
+
+
+ignores: ["op_", "block_", "s_", "initialize", "_initialize_",
+          "new", "stdin", "stdout", "stderr", "argv"];
+op_methods: [];
+seen: Map();
+queue: [builtin];
+
+";;; === BEGIN ===".p;
+while (!queue.empty()) {
+    type: queue.front();
+    queue.pop_front();
+    (";; " ~ type.to_s).p;
+    type.members {|name, x, member|
+        if (member is Class) {
+            if (seen[member]) {
+                continue;
+            }
+            seen[member] = true;
+            queue.push_back(member);
+        } else {
+            if (str_start_with(name, "op_")) {
+                op_methods.push_back(name);
+            }
+            if (any(ignores, |x| str_start_with(name, x)) || is_inherited_member(member, type, name)) {
+                continue;
+            }
+            name.p;
+        }
+    }
+    "".p;
+}
+
+";; op methods".p;
+uniq(op_methods).each {
+    it.p;
+}
+
+";;; === END ===".p;

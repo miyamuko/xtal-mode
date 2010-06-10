@@ -4,7 +4,7 @@
 ;;;;
 ;;;; License:
 ;;;;
-;;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
+;;;;   Copyright (c) 2007-2008 MIYAMUKO Katsuyuki.
 ;;;;
 ;;;;   xtal-mode is released under an MIT license.
 ;;;;   See xtal-mode/docs/MIT-LICENSE for full license.
@@ -66,9 +66,9 @@
     (:item nil "Xtal インストールパスをコマンドプロンプトで開く (&C)" 'xtal-open-install-path-by-command-prompt)
     (:sep :above-manual)
     (:item :home-page "Xtal &Home Page"
-     (open-url-command *xtal-home-url*))
+     (open-url-command '*xtal-home-url*))
     (:item :online-reference "Xtal オンラインリファレンス (&O)"
-     (open-url-command *xtal-online-reference-url*))
+     (open-url-command '*xtal-online-reference-url*))
     (:sep :above-version)
     (:item :version (concat "xtal-mode &version " (xtal-mode-version))
      'xtal-mode-show-credit)
@@ -110,12 +110,18 @@
   (interactive)
   (track-popup-menu (xtal-popup-menu)))
 
-(defun xtal-add-bookmark-menu (tag name url)
-  (let* ((menu (xtal-popup-menu))
-         (pos (and menu (get-menu-position menu :above-version))))
-    (when pos
-      (insert-menu-item menu pos
-                        tag name (open-url-command url)))))
+(defun xtal-add-bookmark-menu (tag name url-or-fun)
+  (let ((menu (xtal-popup-menu))
+        (command (cond ((commandp url-or-fun)
+                        url-or-fun)
+                       ((functionp url-or-fun)
+                        #'(lambda () (interactive) (funcall url-or-fun)))
+                       (t
+                        (open-url-command url-or-fun)))))
+    (when menu
+      (while (delete-menu menu tag))
+      (insert-menu-item menu (get-menu-position menu :above-version)
+                        tag name command))))
 
 
 ;;; 初期化

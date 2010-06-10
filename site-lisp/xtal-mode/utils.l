@@ -4,7 +4,7 @@
 ;;;;
 ;;;; License:
 ;;;;
-;;;;   Copyright (c) 2007 MIYAMUKO Katsuyuki.
+;;;;   Copyright (c) 2007-2008 MIYAMUKO Katsuyuki.
 ;;;;
 ;;;;   xtal-mode is released under an MIT license.
 ;;;;   See xtal-mode/docs/MIT-LICENSE for full license.
@@ -77,10 +77,13 @@
     (goto-eol)
     (point)))
 
-(defun open-url-command (url)
+(defun open-url-command (sym-or-url)
   #'(lambda ()
       (interactive)
-      (shell-execute url t)))
+      (shell-execute (if (symbolp sym-or-url)
+                         (symbol-value sym-or-url)
+                       sym-or-url)
+                     t)))
 
 
 (defun looking-around (str)

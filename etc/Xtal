@@ -1,155 +1,195 @@
 ;*2
 
+;; template method
 initialize
+block_first
+block_next
+block_break
+block_catch
 
-;; Any
-object_name
-get_class
-class
+;;; === BEGIN ===
+;; lib::builtin
+compile_file
+compile
+gc
+full_gc
+disable_gc
+enable_gc
+clock
+open
+interned_strings
+print
+println
+chain
+range
+load
+
+;; lib::builtin::Exception
 to_s
-p
+message
+backtrace
+append_backtrace
 
-;; Int
+;; lib::builtin::Any
+class
+get_class
+self
+object_name
+to_mv
+flatten_mv
+flatten_all_mv
+p
+to_s
+
+;; lib::builtin::String
+to_i
+to_f
+to_s
+clone
+length
+size
+intern
+each
+scan
+split
+gsub
+sub
+
+;; lib::builtin::Int
 to_i
 to_f
 to_s
 times
 
-;; Float
+;; lib::builtin::Float
 to_i
 to_f
 to_s
 
-;; String
-to_i
-to_f
+;; lib::builtin::Null
 to_s
-size
-length
-intern
-split
+to_a
+to_m
 
-;; Array
+;; lib::builtin::Undefined
+to_mv
+to_s
+
+;; lib::builtin::True
+to_s
+
+;; lib::builtin::False
+to_s
+
+;; lib::builtin::IntRange
+begin
+end
+each
+
+;; lib::builtin::FloatRange
+
+;; lib::builtin::ChRange
+each
+
+;; lib::builtin::Array
 size
 length
 resize
 empty
 slice
-push_back
+splice
 pop_back
-push_front
+push_back
 pop_front
+push_front
 erase
 insert
 to_s
 to_a
+join
 each
 clone
 front
 back
 clear
-op_at
-op_set_at
-op_cat
-op_cat_assign
+reverse
+assign
+concat
 
-;; Map
-size
-length
-empty
-push_back
-erase
-to_s
-each
-each_pair
-each_key
-each_value
+;; lib::builtin::MultiValue
 clone
-clear
-op_at
-op_set_at
-op_cat
-op_cat_assign
-
-;; Stream
-put_i8
-put_i16
-put_i32
-put_u8
-put_u16
-put_u32
-get_i8
-get_i16
-get_i32
-get_u8
-get_u16
-get_u32
-put_s
-get_s
-seek
-tell
-pour
-pour_all
-size
-close
-serialize
-deserialize
-iter_first
-iter_next
-iter_break
-
-;; MemoryStream
-
-;; FileStream
-
-;; Fiber
-halt
-is_finished
-reset
-iter_first
-iter_next
-iter_break
-
-;; Iterator
-collect
-map
-select
-filter
 to_a
-join
-with_index
-cycle
-break_if
-take
+to_s
+to_mv
+flatten_mv
+flatten_all_mv
 
-;; Arguments
+;; lib::builtin::Map
+to_s
+to_m
 size
 length
-each_ordered_arg
-each_named_arg
+insert
 each
-each_pair
-op_at
+pairs
+keys
+values
+clone
+erase
+empty
 
-;; Class
+;; lib::builtin::Set
+each
+
+;; lib::builtin::zip
+
+;; lib::builtin::Arguments
+size
+length
+ordered_arguments
+named_arguments
+each
+
+;; lib::builtin::Fun
+call
+
+;; lib::builtin::Fiber
+reset
+halt
+is_alive
+
+;; lib::builtin::Code
+
+;; lib::builtin::Frame
+members
+
+;; lib::builtin::Class
 inherit
+inherited_classes
 is_inherited
-each_member
-each_inherited_class
+find_near_member
+ancestors
+members
 
-:: Thread
-sleep
-join
+;; lib::builtin::CppClass
 
-;; Mutex
-lock
-unlock
-iter_first
-iter_next
-iter_break
+;; lib
 
-;; Math
-abs
+;; lib::builtin::Lib
+append_load_path
+
+;; lib::builtin::debug
+enable
+disable
+is_enabled
+line_hook
+call_hook
+return_hook
+set_line_hook
+set_call_hook
+set_return_hook
+
+;; lib::builtin::math
 acos
 asin
 atan
@@ -159,77 +199,243 @@ cos
 exp
 floor
 log
-max
-min
 pow
-random
-random_range
 sin
 sqrt
 tan
+abs
+max
+min
+random
+random_range
 
-;; 組み込み関数
+;; lib::builtin::Stream
+get_s
+get_s_all
+put_s
 print
 println
+seek
+tell
+pour
+pour_all
+size
+eos
+serialize
+deserialize
+xtalize
+dextalize
+scan
+split
+
+;; lib::builtin::StdioStream
+
+;; lib::builtin::MemoryStream
+to_s
+resize
+
+;; lib::builtin::StringStream
+to_s
+
+;; lib::builtin::Thread
+join
+yield
+sleep
+
+;; lib::builtin::Mutex
+lock
+unlock
+
+;; lib::builtin::Format
+to_s
+serial_save
+serial_load
+serial_new
+
+;; lib::builtin::Text
+to_s
+serial_save
+serial_load
+serial_new
+
+;; lib::builtin
 compile_file
 compile
-load
 gc
 full_gc
 disable_gc
 enable_gc
-range
-zip
-chain
 clock
+open
+interned_strings
+print
+println
+chain
+range
+load
 
-;;; 0.9.7 から削除
-object_dump
-object_load
+;; lib::builtin::Iterator
+each
+p
+to_a
+to_m
+reverse
+join
+with_index
+collect
+select
+break_if
+take
+zip
+unique
+chain
+cycle
+max_element
+min_element
+find
+inject
+with_prev
+flatten_param
+flatten_all_param
+classic
 
-;; 演算子オーバーロード
+;; lib::builtin::Iterable
+to_a
+to_m
+reverse
+join
+with_index
+collect
+map
+select
+filter
+break_if
+take
+zip
+unique
+chain
+cycle
+max_element
+min_element
+find
+inject
+with_prev
+flatten_param
+flatten_all_param
+classic
+
+;; lib::builtin::StandardError
+
+;; lib::builtin::RuntimeError
+
+;; lib::builtin::IOError
+
+;; lib::builtin::LogicError
+
+;; lib::builtin::CastError
+
+;; lib::builtin::ArgumentError
+
+;; lib::builtin::YieldError
+
+;; lib::builtin::InstanceVariableError
+
+;; lib::builtin::UnsupportedError
+
+;; lib::builtin::RedefinedError
+
+;; lib::builtin::AccessibilityError
+
+;; lib::builtin::AssertionFailed
+
+;; lib::builtin::CompileError
+
+;; lib::builtin::ClassicIterator
+current
+has_next
+is_done
+next
+source
+
+;; lib::builtin::xeg
+set
+back_ref
+before
+after
+leaf
+node
+splice_node
+cap
+bound
+eq
+eql
+error
+decl
+
+;; lib::builtin::debug::Info
+clone
+kind
+line
+fun_name
+file_name
+set_kind
+set_line
+set_fun_name
+set_file_name
+
+;; lib::builtin::xeg::Executor
+reset
+parse
+match
+captures
+named_captures
+prefix
+suffix
+errors
+read
+peek
+tree
+
+;; op methods
 op_add
-op_add_assign
-op_and
-op_and_assign
-op_assign
-op_at
-op_call
-op_cat
-op_cat_assign
-op_com
-op_dec
-op_div
-op_div_assign
-op_eq
-op_eq_assign
-op_inc
-op_lt
-op_lt_assign
-op_mod
-op_mod_assign
-op_mul
-op_mul_assign
-op_neg
-op_or
-op_or_assign
-op_pos
-op_set_at
-op_shl
-op_shl_assign
-op_shr
-op_shr_assign
 op_sub
-op_sub_assign
-op_ushr
-op_ushr_assign
+op_cat
+op_mul
+op_div
+op_mod
+op_and
+op_or
 op_xor
+op_shr
+op_shl
+op_ushr
+op_add_assign
+op_sub_assign
+op_cat_assign
+op_mul_assign
+op_div_assign
+op_mod_assign
+op_and_assign
+op_or_assign
 op_xor_assign
-
-iter_first
-iter_next
-iter_break
-
+op_shr_assign
+op_shl_assign
+op_ushr_assign
+op_eq
+op_lt
+op_at
+op_set_at
+op_range
+op_in
+op_com
+op_add_assig
+op_inc
+op_dec
+op_pos
+op_neg
+op_lt_assign
+op_eq_assign
+;;; === END ===
 
 
 ;; keyword
@@ -247,27 +453,23 @@ fiber
 yield
 return
 once
+nop
 xtal
 try
 catch
 finally
 throw
 class
-import
-callee
+singleton
 current_context
 dofun
 is
-export
-unittest
 assert
 pure
 nobreak
 switch
-current_continuation
 case
 default
-need_result
 once
 static
 
@@ -277,17 +479,13 @@ this
 null
 true
 false
-nop
+undefined
 callee
 lib
 filelocal
 stdin
 stdout
 stderr
-
-;;; 0.9.7 から削除
-toplevel
-
 
 ;; 定数 (math)
 PI
