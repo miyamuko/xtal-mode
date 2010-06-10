@@ -22,5 +22,4 @@ files:
     - site-lisp/xtal-mode/docs/**/*.*
     - site-lisp/xtal-mode/src/**/*.*
   exclude:
-    - site-lisp/xtal-mode-scratch.l
     - site-lisp/xtal-mode/tests/*.*
