@@ -1,76 +1,76 @@
 =begin
 
-= xtal-mode - Xtal ����̃��W���[���[�h
+= xtal-mode - Xtal 言語のメジャーモード
 
-  * Author: �݂�ނ� ���䂫 ((<URL:mailto:miyamuko@gmail.com>))
+  * Author: みやむこ かつゆき ((<URL:mailto:miyamuko@gmail.com>))
   * Home URL: ((<URL:http://miyamuko.s56.xrea.com/xyzzy/xtal-mode/intro.htm>))
   * Version: 0.0.5
 
 
 == DESCRIPTION
 
-xtal-mode �� ((<Xtal|URL:http://code.google.com/p/xtal-language/>))
-�����ҏW���邽�߂̃��W���[���[�h�ł��B
+xtal-mode は ((<Xtal|URL:http://code.google.com/p/xtal-language/>))
+言語を編集するためのメジャーモードです。
 
-�ȉ��̋@�\��񋟂��܂��B
+以下の機能を提供します。
 
-  * �L�[���[�h�E�g�ݍ��݊֐��E���\�b�h�̐F�Â�
-  * �L�[���[�h�E�g�ݍ��݊֐��E���\�b�h�̕⊮
-  * �����C���f���g
-  * �N���X�E���\�b�h�̈ꗗ
-  * ���P�� (�N���X�E���\�b�h�E���Ȃ�) �ł̈ړ��E�ҏW
-  * �^�O�W�����v
-  * xtal �̎��s
-  * ix �̎��s
+  * キーワード・組み込み関数・メソッドの色づけ
+  * キーワード・組み込み関数・メソッドの補完
+  * 自動インデント
+  * クラス・メソッドの一覧
+  * 文単位 (クラス・メソッド・文など) での移動・編集
+  * タグジャンプ
+  * xtal の実行
+  * ix の実行
 
 
 == INSTALL
 
-=== NetInstaller �ŃC���X�g�[��
+=== NetInstaller でインストール
 
-(1) NetInstaller �� xtal-mode ���C���X�g�[�����Ă��������B
+(1) NetInstaller で xtal-mode をインストールしてください。
 
-(2) ((*ni-autoload �𗘗p���Ă��Ȃ��ꍇ*))�́A
-    ~/.xyzzy �܂��� $XYZZY/site-lisp/siteinit.l �Ɉȉ��̃R�[�h��ǉ����Ă��������B
+(2) ((*ni-autoload を利用していない場合*))は、
+    ~/.xyzzy または $XYZZY/site-lisp/siteinit.l に以下のコードを追加してください。
 
         ;; xtal-mode
         (require "xtal-mode")
         (pushnew '("\\.xtal$" . xtal-mode) *auto-mode-alist* :test 'equal)
 
-    ni-autoload �𗘗p���Ă���ꍇ�͒ǉ�����K�v�͂���܂���B
+    ni-autoload を利用している場合は追加する必要はありません。
 
-(3) �����悤�� xtal �̃C���X�g�[���f�B���N�g����ݒ肵�Ă��������B
+(3) 同じように xtal のインストールディレクトリを設定してください。
 
-        ;; xtal �̃C���X�g�[����
+        ;; xtal のインストール先
         (setf *xtal-install-path* "c:/Program Files/xtal/")
 
-(4) �ݒ�𔽉f�����邽�� xyzzy ���ċN�����Ă��������B
+(4) 設定を反映させるため xyzzy を再起動してください。
 
-    ��siteinit.l �ɋL�q�����ꍇ�ɂ͍ă_���v���K�v�ł��B
+    ※siteinit.l に記述した場合には再ダンプが必要です。
 
-(5) �g���q�� .xtal �̃t�@�C�����J���� xtal-mode �Ɉڍs���܂��B
+(5) 拡張子が .xtal のファイルを開くと xtal-mode に移行します。
 
-=== NetInstaller ���g�킸�ɃC���X�g�[��
+=== NetInstaller を使わずにインストール
 
-(1) �A�[�J�C�u���_�E�����[�h���܂��B
+(1) アーカイブをダウンロードします。
 
     ((<URL:http://miyamuko.s56.xrea.com/xyzzy/archives/xtal-mode.zip>))
 
-(2) �A�[�J�C�u��W�J���āA$XYZZY �z���Ƀt�@�C�����R�s�[���܂��B
+(2) アーカイブを展開して、$XYZZY 配下にファイルをコピーします。
 
-(3) ~/.xyzzy �܂��� $XYZZY/site-lisp/siteinit.l �Ɉȉ��̃R�[�h��ǉ����܂��B
+(3) ~/.xyzzy または $XYZZY/site-lisp/siteinit.l に以下のコードを追加します。
 
         ;; xtal-mode
         (require "xtal-mode")
         (pushnew '("\\.xtal$" . xtal-mode) *auto-mode-alist* :test 'equal)
-        ;; xtal �̃C���X�g�[����
+        ;; xtal のインストール先
         (setf *xtal-install-path* "c:/Program Files/xtal/")
 
-(4) �ݒ�𔽉f�����邽�� xyzzy ���ċN�����Ă��������B
+(4) 設定を反映させるため xyzzy を再起動してください。
 
-    ��siteinit.l �ɋL�q�����ꍇ�ɂ͍ă_���v���K�v�ł��B
+    ※siteinit.l に記述した場合には再ダンプが必要です。
 
-(5) �g���q�� .xtal �̃t�@�C�����J���� xtal-mode �Ɉڍs���܂��B
+(5) 拡張子が .xtal のファイルを開くと xtal-mode に移行します。
 
 
 
@@ -78,89 +78,89 @@ xtal-mode �� ((<Xtal|URL:http://code.google.com/p/xtal-language/>))
 
 === PACKAGE
 
-xtal-mode �͈ȉ��̃p�b�P�[�W�𗘗p���Ă��܂��B
+xtal-mode は以下のパッケージを利用しています。
 
   * xtal-mode
 
-xtal-mode �p�b�P�[�W����͈ȉ��̕ϐ��E�֐��� export ���Ă��܂��B
+xtal-mode パッケージからは以下の変数・関数を export しています。
 
-�܂��Axtal-mode �p�b�P�[�W�̓f�t�H���g�� user ����� editor �p�b�P�[�W���� use ����܂��B
+また、xtal-mode パッケージはデフォルトで user および editor パッケージから use されます。
 
 
 === VARIABLE
 
 --- *xtal-mode-map*
-    xtal-mode �̃L�[�}�b�v
+    xtal-mode のキーマップ
 
 --- *xtal-mode-syntax-table*
-    xtal-mode �̃V���^�b�N�X�e�[�u��
+    xtal-mode のシンタックステーブル
 
 --- *xtal-mode-hook*
-    xtal-mode ���s���ɌĂ΂��t�b�N
+    xtal-mode 実行時に呼ばれるフック
 
 --- *xtal-create-output-buffer-hook*
-    xtal �R�}���h�̎��s���ʃo�b�t�@�쐬���ɌĂ΂��t�b�N
+    xtal コマンドの実行結果バッファ作成時に呼ばれるフック
 
 --- *xtal-before-run-xtal-hook*
-    xtal �R�}���h���s���O�ɌĂ΂��t�b�N
+    xtal コマンド実行直前に呼ばれるフック
 
 --- *xtal-run-xtal-hook*
-    xtal �R�}���h���s�J�n���ɌĂ΂��t�b�N�B������ xtal.exe �� process
+    xtal コマンド実行開始時に呼ばれるフック。引数は xtal.exe の process
 
 --- *xtal-after-run-xtal-hook*
-    xtal �R�}���h�̎��s���I�������Ƃ��ɌĂ΂��t�b�N�B������ xtal.exe �� process
+    xtal コマンドの実行が終了したときに呼ばれるフック。引数は xtal.exe の process
 
 --- *xtal-comment-column*
-    indent-for-comment �ő}������R�����g�̊J�n�ʒu
+    indent-for-comment で挿入するコメントの開始位置
 
 --- *xtal-indent-level*
-    �C���f���g���x�� (�f�t�H���g: 4)
+    インデントレベル (デフォルト: 4)
 
-      ;; �C���f���g���x���� 2 �ɂ���
+      ;; インデントレベルを 2 にする
       (setf *xtal-indent-level* 2)
 
 --- *xtal-electric-insert-close-parentheses*
-    �Ή���������ʂ������I�ɑ}������ꍇ non-nil (�f�t�H���g: t)
+    対応する閉じ括弧を自動的に挿入する場合 non-nil (デフォルト: t)
 
 --- *xtal-electric-insert-close-string*
-    ������������I�ɕ���ꍇ non-nil (�f�t�H���g: t)
+    文字列を自動的に閉じる場合 non-nil (デフォルト: t)
 
 --- *xtal-keyword-file*
-    �L�[���[�h�t�@�C���� (�f�t�H���g: Xtal)�B
+    キーワードファイル名 (デフォルト: Xtal)。
 
-    $XYZZY/etc �z���̃t�@�C�������w��B
+    $XYZZY/etc 配下のファイル名を指定。
 
 --- *xtal-install-path*
-    Xtal �̃C���X�g�[���p�X�B
+    Xtal のインストールパス。
 
-    ���̒l�͕K���ݒ肵�Ă��������B
+    この値は必ず設定してください。
 
         (setf *xtal-install-path* "d:/usr/local/xtal")
 
 --- *xtal-command-xtal*
-    xtal.exe �̃p�X (�f�t�H���g: "xtal.exe")�B
+    xtal.exe のパス (デフォルト: "xtal.exe")。
 
-    ���΃p�X�̏ꍇ ((<*xtal-install-path*>)) ����T���܂��B
+    相対パスの場合 ((<*xtal-install-path*>)) から探します。
 
 --- *xtal-command-ix*
-    ix.exe �̃p�X (�f�t�H���g: "ix.exe")�B
+    ix.exe のパス (デフォルト: "ix.exe")。
 
-    ���΃p�X�̏ꍇ ((<*xtal-install-path*>)) ����T���܂��B
+    相対パスの場合 ((<*xtal-install-path*>)) から探します。
 
 --- *xtal-mode-output-buffer-name*
-    xtal �R�}���h�̎��s���ʃo�b�t�@�̖��O (�f�t�H���g: "*Xtal*")
+    xtal コマンドの実行結果バッファの名前 (デフォルト: "*Xtal*")
 
 --- *xtal-command-output-window-height*
-    xtal �̎��s���ʂ�\������E�B���h�E�̍��� (�f�t�H���g -10)
+    xtal の実行結果を表示するウィンドウの高さ (デフォルト -10)
 
 --- *xtal-ix-buffer-name*
-    ix �����s����o�b�t�@�̖��O (�f�t�H���g: "*ix*")
+    ix を実行するバッファの名前 (デフォルト: "*ix*")
 
 --- *xtal-ix-window-height*
-    ix �����s����E�B���h�E�̍��� (�f�t�H���g: -20)
+    ix を実行するウィンドウの高さ (デフォルト: -20)
 
 --- *xtal-online-reference-url*
-    �I�����C�����t�@�����X�� URL
+    オンラインリファレンスの URL
 
 --- *xtal-home-url*
     Home URL
@@ -170,84 +170,84 @@ xtal-mode �p�b�P�[�W����͈ȉ��̕ϐ��E�֐��� export ���Ă��܂��B
 
 --- xtal-mode
 
-    �o�b�t�@�� Xtal �ҏW���[�h�ɂ��܂��B
+    バッファを Xtal 編集モードにします。
 
 --- xtal-completion
 
-    �f�t�H���g�L�[�o�C���h: ((%M-TAB%))
+    デフォルトキーバインド: ((%M-TAB%))
 
-    Xtal �̃L�[���[�h�A���\�b�h����⊮���܂��B
+    Xtal のキーワード、メソッド名を補完します。
 
 --- xtal-indent-buffer
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c C-\%))
+    デフォルトキーバインド: ((%C-c C-\%))
 
-    �o�b�t�@�S�̂��C���f���g���܂��B
+    バッファ全体をインデントします。
 
 --- xtal-comment-region
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c C-9%))
+    デフォルトキーバインド: ((%C-c C-9%))
 
-    ���[�W�������R�����g�A�E�g���܂��B
+    リージョンをコメントアウトします。
 
 --- xtal-uncomment-region
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c C-8%))
+    デフォルトキーバインド: ((%C-c C-8%))
 
-    ���[�W�������R�����g���������܂��B
+    リージョンをコメントを解除します。
 
 --- xtal-toggle-comment-line
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c C-/%))
+    デフォルトキーバインド: ((%C-c C-/%))
 
-    �J�[�\���s�� 1 �s�R�����g��؂�ւ��܂��B
+    カーソル行の 1 行コメントを切り替えます。
 
 --- xtal-run-with-current-buffer
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c C-x%))
+    デフォルトキーバインド: ((%C-c C-x%))
 
-    �ҏW���̃o�b�t�@�� xtal �Ŏ��s���܂��B
+    編集中のバッファを xtal で実行します。
 
-    * �t�@�C����ۑ����Ă��Ȃ��ꍇ�́A�t�@�C���ɕۑ����Ă�����s���܂��B
-    * �t�@�C���������݂��Ȃ��ꍇ�́A�ꎞ�t�@�C���ɕۑ����Ă�����s���܂��B
+    * ファイルを保存していない場合は、ファイルに保存してから実行します。
+    * ファイル名が存在しない場合は、一時ファイルに保存してから実行します。
 
 --- xtal-first-error
 
-    �f�t�H���g�L�[�o�C���h: ((%F10%))
+    デフォルトキーバインド: ((%F10%))
 
-    Xtal �����s���ʂ̍ŏ��̃G���[�Ɉړ����܂��B
+    Xtal を実行結果の最初のエラーに移動します。
 
-    ���̌�AF11 ���������ƂŎ��̃G���[�Ɉړ��ł��܂��B
+    その後、F11 を押すことで次のエラーに移動できます。
 
 --- xtal-close-output-buffer
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c 0%))
+    デフォルトキーバインド: ((%C-c 0%))
 
-    Xtal �̎��s���ʂ��o�b�t�@���폜���܂��B
+    Xtal の実行結果をバッファを削除します。
 
 --- ix
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c 1%))
+    デフォルトキーバインド: ((%C-c 1%))
 
-    ix �� xyzzy �����Ŏ��s���܂��B
-    ix �o�b�t�@�̑�����@�� ((<ix-mode>)) ���Q�Ƃ��Ă��������B
+    ix を xyzzy 内部で実行します。
+    ix バッファの操作方法は ((<ix-mode>)) を参照してください。
 
 --- ix-console
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c !%))
+    デフォルトキーバインド: ((%C-c !%))
 
-    �R�}���h�v�����v�g�� ix ���N�����܂��B
+    コマンドプロンプトで ix を起動します。
 
 --- xtal-mark-statement
 
-    �f�t�H���g�L�[�o�C���h: ((%M-SPC%))
+    デフォルトキーバインド: ((%M-SPC%))
 
-    �J�[�\��������s�̕��S�̂��}�[�N���܂��B
+    カーソルがある行の文全体をマークします。
 
-    ��:
+    例:
 
-      ��Hello: class {
-      ��    world: method() {
+      ●Hello: class {
+      ▲    world: method() {
                 say("World!");
             }
             say: method(name) {
@@ -255,137 +255,137 @@ xtal-mode �p�b�P�[�W����͈ȉ��̕ϐ��E�֐��� export ���Ă��܂��B
             }
         }
 
-    * ���ɃJ�[�\����u���Ď��s����� Hello �N���X�S�̂��}�[�N���܂��B
-    * ���ɃJ�[�\����u���Ď��s����� world ���\�b�h�S�̂��}�[�N���܂��B
+    * ●にカーソルを置いて実行すると Hello クラス全体をマークします。
+    * ▲にカーソルを置いて実行すると world メソッド全体をマークします。
 
 --- xtal-forward-statement
 
-    �f�t�H���g�L�[�o�C���h: ((%C-M-n%))
+    デフォルトキーバインド: ((%C-M-n%))
 
-    ���̕��Ɉړ����܂��B
+    次の文に移動します。
 
-    ��:
+    例:
 
       Hello: class {
-        ��world: method() {
-            ��say("World!");
+        ●world: method() {
+            ▲say("World!");
           }
-        ��say: method(name) {
+        ■say: method(name) {
               print("Hello, " ~ name);
           }
       }
 
-    * ���ɃJ�[�\����u���Ď��s����� say() �̐擪 (��) �Ɉړ����܂��B
-    * ������x���s����� say method �̐擪 (��) �Ɉړ����܂��B
+    * ●にカーソルを置いて実行すると say() の先頭 (▲) に移動します。
+    * もう一度実行すると say method の先頭 (■) に移動します。
 
 --- xtal-backward-statement
 
-    �f�t�H���g�L�[�o�C���h: ((%C-M-p%))
+    デフォルトキーバインド: ((%C-M-p%))
 
-    �O�̕��Ɉړ����܂��B
+    前の文に移動します。
 
 --- xtal-forward-statement-in-scope
 
-    �f�t�H���g�L�[�o�C���h: ((%C-M-j%))
+    デフォルトキーバインド: ((%C-M-j%))
 
-    ����̃X�R�[�v���Ŏ��̕��Ɉړ����܂��B
+    同一のスコープ内で次の文に移動します。
 
-    ��:
+    例:
 
       Hello: class {
-        ��world: method() {
+        ●world: method() {
               say("World!");
           }
-        ��say: method(name) {
+        ▲say: method(name) {
               print("Hello, " ~ name);
           }
       }
 
-    * ���ɃJ�[�\����u���Ď��s����� say method �̐擪 (��) �Ɉړ����܂��B
-    * ������x���s����ƃJ�[�\���͈ړ����܂���B
+    * ●にカーソルを置いて実行すると say method の先頭 (▲) に移動します。
+    * もう一度実行するとカーソルは移動しません。
 
 --- xtal-backward-statement-in-scope
 
-    �f�t�H���g�L�[�o�C���h: ((%C-M-k%))
+    デフォルトキーバインド: ((%C-M-k%))
 
-    ����̃X�R�[�v���őO�̕��Ɉړ����܂��B
+    同一のスコープ内で前の文に移動します。
 
 --- xtal-up-statement
 
-    �f�t�H���g�L�[�o�C���h: ((%C-M-u%))
+    デフォルトキーバインド: ((%C-M-u%))
 
-    �ЂƂ�̃X�R�[�v�Ɉړ����܂��B
+    ひとつ上のスコープに移動します。
 
-    ��:
+    例:
 
-      ��Hello: class {
+      ■Hello: class {
             world: method() {
                 say("World!");
             }
-          ��say: method(name) {
-              ��print("Hello, " ~ name);
+          ▲say: method(name) {
+              ●print("Hello, " ~ name);
             }
         }
 
-    * ���ɃJ�[�\����u���Ď��s����� say method �̐擪 (��) �Ɉړ����܂��B
-    * ������x���s����� Hello �N���X�̐擪 (��) �Ɉړ����܂��B
+    * ●にカーソルを置いて実行すると say method の先頭 (▲) に移動します。
+    * もう一度実行すると Hello クラスの先頭 (■) に移動します。
 
 --- xtal-down-statement
 
-    �f�t�H���g�L�[�o�C���h: ((%C-c 0%))
+    デフォルトキーバインド: ((%C-c 0%))
 
-    �ЂƂ��̃X�R�[�v�Ɉړ����܂��B
+    ひとつ下のスコープに移動します。
 
-    ��:
+    例:
 
-      ��Hello: class {
-          ��world: method() {
-              ��say("World!");
+      ●Hello: class {
+          ▲world: method() {
+              ■say("World!");
             }
             say: method(name) {
                 print("Hello, " ~ name);
             }
         }
 
-    * ���ɃJ�[�\����u���Ď��s����� world method �̐擪 (��) �Ɉړ����܂��B
-    * ������x���s����� say() �̐擪 (��) �Ɉړ����܂��B
+    * ●にカーソルを置いて実行すると world method の先頭 (▲) に移動します。
+    * もう一度実行すると say() の先頭 (■) に移動します。
 
 --- xtal-transpose-statement
 
-    �f�t�H���g�L�[�o�C���h: ((%C-M-t%))
+    デフォルトキーバインド: ((%C-M-t%))
 
-    ���ƕ��̊ԂŎ��s����ƕ������ւ��܂��B
-    �N���X�⃁�\�b�h�P�ʂœ���ւ��邱�Ƃ��ł��܂��B
+    文と文の間で実行すると文を入れ替えます。
+    クラスやメソッド単位で入れ替えることができます。
 
-    �������Ŏ��s����ƃJ�[�\���O��̎������ւ��܂� (�ʏ�� transpose-sexp �Ǔ���)�B
+    文内部で実行するとカーソル前後の式を入れ替えます (通常の transpose-sexp ど同じ)。
 
-    ��:
+    例:
 
         Hello: class {
             world: method() {
                 say("World!");
             }
-            ��
+            ●
             say: method(name) {
-                print("Hello,"�� ~ name);
+                print("Hello,"▲ ~ name);
             }
         }
 
-    * ���ɃJ�[�\����u���Ď��s����� world ���\�b�h�� say ���\�b�h������ւ��܂��B
-    * ���ɃJ�[�\����u���Ď��s����� "Hello, " �� name ������ւ��܂��B
+    * ●にカーソルを置いて実行すると world メソッドと say メソッドが入れ替わります。
+    * ▲にカーソルを置いて実行すると "Hello, " と name が入れ替わります。
 
-    �� 2:
+    例 2:
 
-    xtal-transpose-statement �� if �� else if �̂ݓ��ʂȏ��������܂�
-    (if �� else �̓���ւ��͉����l��������ւ��邾��)�B
+    xtal-transpose-statement は if と else if のみ特別な処理をします
+    (if と else の入れ替えは何も考えず入れ替えるだけ)。
 
         if (a == 1) {
           hello();
-        }��else if (a == 2) {
+        }●else if (a == 2) {
           world();
         }
 
-    ���ɃJ�[�\����u���Ď��s����ƈȉ��̂悤�ɂȂ�܂��B
+    ●にカーソルを置いて実行すると以下のようになります。
 
         if (a == 2) {
             world();
@@ -395,42 +395,42 @@ xtal-mode �p�b�P�[�W����͈ȉ��̕ϐ��E�֐��� export ���Ă��܂��B
 
 --- xtal-open-install-path-by-command-prompt
 
-    ((<*xtal-install-path*>)) �Őݒ肵���f�B���N�g����
-    �R�}���h�v�����v�g�ŊJ���܂��B
+    ((<*xtal-install-path*>)) で設定したディレクトリを
+    コマンドプロンプトで開きます。
 
 --- xtal-open-install-path-by-explorer
 
-    ((<*xtal-install-path*>)) �Őݒ肵���f�B���N�g����
-    �G�N�X�v���[���ŊJ���܂��B
+    ((<*xtal-install-path*>)) で設定したディレクトリを
+    エクスプローラで開きます。
 
 --- xtal-track-popup-menu
 
-    xtal-mode �̃��j���[���|�b�v�A�b�v�\�����܂��B
+    xtal-mode のメニューをポップアップ表示します。
 
 --- xtal-mode-show-credit
 
-    xtal-mode �̃o�[�W������\�����܂��B
+    xtal-mode のバージョンを表示します。
 
 
 === FUNCTION
 
 --- xtal-add-bookmark-menu tag name uri-or-command
 
-    �w�肵���t�@�C���� URL ���J�����j���[���ڂ� Xtal ���j���[�ɒǉ�����֐��ł��B
+    指定したファイルや URL を開くメニュー項目を Xtal メニューに追加する関数です。
 
-    ���j���[���ڂ̓o�[�W�����ԍ��̏�ɒǉ�����܂��B
+    メニュー項目はバージョン番号の上に追加されます。
 
-    * tag �ɂ̓��j���[���ڂ����Ƃ��环�ʂł���悤�ɂ���l���w�肵�܂��Bnil �ł����܂��܂���B
-    * name �ɂ̓��j���[�ɕ\�����閼�O���w�肵�܂��B
-    * uri-or-command �ɂ͕�����܂��̓R�}���h���w�肵�܂��B
-      * ��������w�肵���ꍇ�� shell-execute �Ŏ��s���܂��B
-      * �R�}���h���w�肵���ꍇ�͂��̃R�}���h�������Ȃ��Ŏ��s (funcall) ���܂��B
+    * tag にはメニュー項目をあとから識別できるようにする値を指定します。nil でもかまいません。
+    * name にはメニューに表示する名前を指定します。
+    * uri-or-command には文字列またはコマンドを指定します。
+      * 文字列を指定した場合は shell-execute で実行します。
+      * コマンドを指定した場合はそのコマンドを引数なしで実行 (funcall) します。
 
-    ��:
+    例:
 
-        ;; Xtgl �� HTML �w���v�����j���[�ɒǉ��B
-        ;; xtal.chm �� xtal.exe �Ɠ����ꏊ�ɂ����Ă����B
-        (xtal-add-bookmark-menu :chm "Xtal ���t�@�����X (&C)"
+        ;; Xtgl の HTML ヘルプをメニューに追加。
+        ;; xtal.chm は xtal.exe と同じ場所においておく。
+        (xtal-add-bookmark-menu :chm "Xtal リファレンス (&C)"
                                 #'(lambda ()
                                     (interactive)
                                     (let ((*html-help-path* (merge-pathnames "xtal.chm" (si:getenv "XTAL_HOME"))))
@@ -438,150 +438,150 @@ xtal-mode �p�b�P�[�W����͈ȉ��̕ϐ��E�֐��� export ���Ă��܂��B
 
 --- goto-matched-multi-line-comment
 
-    �Ή����镡���s�R�����g�̊J�n�E�I���ʒu�Ɉړ����܂��B
+    対応する複数行コメントの開始・終了位置に移動します。
 
-    * �u/*�v�̋߂��Ŏ��s�����ꍇ�Ή�����u*/�v�Ɉړ����܂��B
-    * �u*/�v�̋߂��Ŏ��s�����ꍇ�Ή�����u/*�v�Ɉړ����܂��B
+    * 「/*」の近くで実行した場合対応する「*/」に移動します。
+    * 「*/」の近くで実行した場合対応する「/*」に移動します。
 
 --- goto-beginning-of-multi-line-comment
 
-    �����s�R�����g�̊J�n (/*) �Ɉړ����܂��B
+    複数行コメントの開始 (/*) に移動します。
 
 --- goto-end-of-multi-line-comment
 
-    �����s�R�����g�̏I�� (*/) �Ɉړ����܂��B
+    複数行コメントの終了 (*/) に移動します。
 
 --- xtal-comment-line-p
 
-    ���ݍs���R�����g�s�Ȃ� t ��Ԃ��܂��B
+    現在行がコメント行なら t を返します。
 
 --- xtal-in-comment-p
 
-    �J�[�\���̂���ʒu�� 1 �s�R�����g�܂��͕����s�R�����g�Ȃ� t ��Ԃ��܂��B
+    カーソルのある位置が 1 行コメントまたは複数行コメントなら t を返します。
 
 --- xtal-in-multiline-comment-p
 
-    �J�[�\���̂���ʒu�������s�R�����g�Ȃ� t ��Ԃ��܂��B
-    1 �s�R�����g�̏ꍇ�� nil ��Ԃ��܂��B
+    カーソルのある位置が複数行コメントなら t を返します。
+    1 行コメントの場合は nil を返します。
 
 --- xtal-in-shebang-comment-p
 
-    �J�[�\���̂���ʒu���u#!�v�Ŏn�܂�R�����g�s�Ȃ� t ��Ԃ��܂��B
+    カーソルのある位置が「#!」で始まるコメント行なら t を返します。
 
 --- xtal-parse-point-syntax
 
-    �u#!�v�R�����g�ɑΉ����� parse-point-syntax �ł��B
+    「#!」コメントに対応した parse-point-syntax です。
 
 --- xtal-mode-version
 
-    xtal-mode �̃o�[�W������Ԃ��܂��B
+    xtal-mode のバージョンを返します。
 
-    �o�[�W������ major.minor.teeny �Ƃ����`���ł��B
-    ���ꂼ��̔ԍ��͕K�� 1 ���ɂ���̂ŁA�ȉ��̂悤�ɔ�r���邱�Ƃ��ł��܂�
+    バージョンは major.minor.teeny という形式です。
+    それぞれの番号は必ず 1 桁にするので、以下のように比較することができます
 
         (if (string<= "1.1.0" (xtal-mode-version))
-            '(1.1.0 �ȍ~�ŗL���ȏ���)
-          '(1.1.0 ���O�̃o�[�W�����ł̏���))
+            '(1.1.0 以降で有効な処理)
+          '(1.1.0 より前のバージョンでの処理))
 
 
 == ix-mode
 
-xyzzy �̃o�b�t�@���� ix ���N�� (((<ix>))) ����� ix-mode �ɂȂ�܂��B
+xyzzy のバッファ内で ix を起動 (((<ix>))) すると ix-mode になります。
 
-ix-mode �ł͈ȉ��̃L�[����`����Ă��܂��B
+ix-mode では以下のキーが定義されています。
 
 : RET
-    ���͂��Ă���R�}���h�� ix �ɑ���܂��B
+    入力しているコマンドを ix に送ります。
 
 : C-c C-c
-    ix ���~���܂��B
+    ix を停止します。
 
 : C-c 0
-    ix ���~���A�o�b�t�@����܂��B
+    ix を停止し、バッファを閉じます。
 
 : C-p
-    �ߋ��ɓ��͂��� ix �R�}���h�̗�����}�����܂��B
-    �A�����Ď��s���邱�Ƃŗ������Â����ւ����̂ڂ��čs���܂��B
+    過去に入力した ix コマンドの履歴を挿入します。
+    連続して実行することで履歴を古い方へさかのぼって行きます。
 
 : C-n
-    �ߋ��ɓ��͂��� ix �R�}���h�̗�����}�����܂��B
-    �A�����Ď��s���邱�Ƃŗ�����V�������ւ����̂ڂ��čs���܂��B
+    過去に入力した ix コマンドの履歴を挿入します。
+    連続して実行することで履歴を新しい方へさかのぼって行きます。
 
 : C-M-p
-    ��O�̃v�����v�g�Ɉړ����܂��B
+    一つ前のプロンプトに移動します。
 
-    �ߋ��̃v�����v�g�� Enter �������Ƃ��̃R�}���h���Ď��s�ł��܂��B
-    ���͒��̃R�}���h�͕ۑ�����܂� (M-q �Ɠ���)�B
+    過去のプロンプトで Enter を押すとそのコマンドを再実行できます。
+    入力中のコマンドは保存されます (M-q と同じ)。
 
 : C-M-n
-    ���̃v�����v�g�Ɉړ����܂��B
+    一つ後のプロンプトに移動します。
 
 : M-q
-    ���ݓ��͒��̃R�}���h��ۑ����ē��͍s���N���A���܂��B
+    現在入力中のコマンドを保存して入力行をクリアします。
 
-    ���̃R�}���h�����s����Ǝ��̃v�����v�g�ɂ͕ۑ��������͍s�������I�ɑ}������܂��B
+    他のコマンドを実行すると次のプロンプトには保存した入力行が自動的に挿入されます。
 
 
 == TODO
 
-* lib:foo ���� foo.xtal ���J��
+* lib:foo から foo.xtal を開く
 * xtal-mode
-  * xtal ���s���Ɉ����̎w��i�O�u�����j
+  * xtal 実行時に引数の指定（前置引数）
 * xtal
-  * �O���v���O�����Ƃ��� xtal.exe �����s�B
-    * �K�v?
+  * 外部プログラムとして xtal.exe を実行。
+    * 必要?
 * ix
-  * �J�[�\���ړ��n�̑O�u����
-  * ���݂̃N���X�𑗂�
-  * ���݂̃��\�b�h�𑗂�
-  * �q�X�g��
-    * �q�X�g���̕ҏW
-    * �q�X�g���̈ꗗ
+  * カーソル移動系の前置引数
+  * 現在のクラスを送る
+  * 現在のメソッドを送る
+  * ヒストリ
+    * ヒストリの編集
+    * ヒストリの一覧
       * popup
     * !23
-    * �q�X�g������ (C-r)
-    * �����s
-      * �����I�����Ă��邩�ǂ����̔�������O��
+    * ヒストリ検索 (C-r)
+    * 複数行
+      * 文が終了しているかどうかの判定を自前で
       * zsh
       * inferior-ruby-mode
-  * //=> �`���Ŏ��s���ʂ̑}��
-  * ���͍s���܂Ƃ߂ăo�b�t�@�ɕϊ�
-* �O�� ix
-  * �E�B���h�E�̊Ǘ�
-    * xyzzy �̎q�v���Z�X
-    * ����
+  * //=> 形式で実行結果の挿入
+  * 入力行をまとめてバッファに変換
+* 外部 ix
+  * ウィンドウの管理
+    * xyzzy の子プロセス
+    * 閉じる
     * forground
-    * 2�d�N���h�~
-    * �E�B���h�E�̐؂�ւ�
-  * ���݂�xxx�𑗂�
-    * clipborad �o�R?
-* �R���e�L�X�g�ɉ������⊮
-  * math:: �̌�Ȃ� math �̃��\�b�h����, ::?
-  * . �̂��ƂȂ烁�\�b�h����, .?
-  * �O�ɂȂɂ��Ȃ��Ȃ�A
-  * ���l���e�����A�����񃊃e�����̂���
-  * �N���X���𖾎������⊮
+    * 2重起動防止
+    * ウィンドウの切り替え
+  * 現在のxxxを送る
+    * clipborad 経由?
+* コンテキストに応じた補完
+  * math:: の後なら math のメソッドだけ, ::?
+  * . のあとならメソッドだけ, .?
+  * 前になにもないなら、
+  * 数値リテラル、文字列リテラルのあと
+  * クラス名を明示した補完
 * HTML Help
-  * �E�B���h�E�ʒu�̕ۑ�
-* �\�[�X�̐���
-  * �K�w��
-* iterator �̃N���X�e���v���[�g�̑}��
+  * ウィンドウ位置の保存
+* ソースの整理
+  * 階層化
+* iterator のクラステンプレートの挿入
   * block_first, block_next, block_break, block_catch
-* ������ xtal �̐؂�ւ�
+* 複数の xtal の切り替え
   * menu
   * history
-* �s���� ~ �� + ������ꍇ�̃C���f���g
-* lambda ���̃C���f���g
+* 行末に ~ や + がある場合のインデント
+* lambda 式のインデント
 
 
 == KNOWN BUGS
 
-�Ȃ��B
+なし。
 
 
 == AUTHOR
 
-�݂�ނ� ���䂫 (((<URL:mailto:miyamuko@gmail.com>)))
+みやむこ かつゆき (((<URL:mailto:miyamuko@gmail.com>)))
 
 
 == SEE ALSO
@@ -592,7 +592,7 @@ ix-mode �ł͈ȉ��̃L�[����`����Ă��܂��B
 
 == COPYRIGHT
 
-xtal-mode �� MIT/X ���C�Z���X�Ɋ�Â��ė��p�\�ł��B
+xtal-mode は MIT/X ライセンスに基づいて利用可能です。
 
 See xtal-mode/docs/MIT-LICENSE for full license.
 

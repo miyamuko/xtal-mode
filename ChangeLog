@@ -2,51 +2,51 @@
 
 	* xtal-mode 0.0.5 released!
 
-	* ƒ‰ƒCƒZƒ“ƒXƒtƒ@ƒCƒ‹‚ğ“¯«
+	* ãƒ©ã‚¤ã‚»ãƒ³ã‚¹ãƒ•ã‚¡ã‚¤ãƒ«ã‚’åŒæ¢±
 
 2008-03-21  MIYAMUKO Katsuyuki
 
-	* - xtal 0.9.9.0 ‚ÌƒL[ƒ[ƒh‚ğ’è‹`
-	  - ŒÃ‚¢ƒL[ƒ[ƒh‚ğíœ
+	* - xtal 0.9.9.0 ã®ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’å®šç¾©
+	  - å¤ã„ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’å‰Šé™¤
 
-	* keyword ƒtƒ@ƒCƒ‹‚ğ¶¬‚·‚éƒXƒNƒŠƒvƒg‚ğ’Ç‰ÁB
+	* keyword ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ç”Ÿæˆã™ã‚‹ã‚¹ã‚¯ãƒªãƒ—ãƒˆã‚’è¿½åŠ ã€‚
 
 	* iter_x => block_x.
 
-	* - (xtal-add-bookmark-menu): ˆø”‚ÉŠÖ”‚ğw’è‰Â”\‚É‚µ‚½B
-	  - (xtal-define-popup-menu): *xtal-online-reference-url* ‚ğ•ÏX‚µ‚½‚ç‚·‚®‚É”½‰f‚³‚ê‚é‚æ‚¤‚É
-	    open-url-command ‚É“n‚·ˆø”‚ğ•Ï”–¼‚É‚µ‚½B
+	* - (xtal-add-bookmark-menu): å¼•æ•°ã«é–¢æ•°ã‚’æŒ‡å®šå¯èƒ½ã«ã—ãŸã€‚
+	  - (xtal-define-popup-menu): *xtal-online-reference-url* ã‚’å¤‰æ›´ã—ãŸã‚‰ã™ãã«åæ˜ ã•ã‚Œã‚‹ã‚ˆã†ã«
+	    open-url-command ã«æ¸¡ã™å¼•æ•°ã‚’å¤‰æ•°åã«ã—ãŸã€‚
 
-	* (open-url-command): ƒVƒ“ƒ{ƒ‹–¼‚ğw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* (open-url-command): ã‚·ãƒ³ãƒœãƒ«åã‚’æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 2007-09-30  MIYAMUKO Katsuyuki
 
 	* xtal-mode 0.0.4 released!
 
-	* (*xtal-indent-level*): ƒfƒtƒHƒ‹ƒg‚ğ c-indent-level ‚É‚µ‚½B
+	* (*xtal-indent-level*): ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã‚’ c-indent-level ã«ã—ãŸã€‚
 
-	* (ix): *xtal-command-ix* ‚ª‘¶İ‚·‚é‚©ƒ`ƒFƒbƒN
+	* (ix): *xtal-command-ix* ãŒå­˜åœ¨ã™ã‚‹ã‹ãƒã‚§ãƒƒã‚¯
 	  (ix-console): ditto.
 
 2007-09-29  MIYAMUKO Katsuyuki
 
-	* (current-line-eval): gensym ‰»
+	* (current-line-eval): gensym åŒ–
 
-	* (current-line-indent): current-line-eval ‚Å goto-bol ‚µ‚Ä‚¢‚é‚Ì‚Å goto-bol ‚ğíœ
+	* (current-line-indent): current-line-eval ã§ goto-bol ã—ã¦ã„ã‚‹ã®ã§ goto-bol ã‚’å‰Šé™¤
 
-	* (current-line-indent): ƒoƒO‚Á‚Ä‚¢‚½‚Ì‚ğC³
+	* (current-line-indent): ãƒã‚°ã£ã¦ã„ãŸã®ã‚’ä¿®æ­£
 
-	* (xtal-electric-insert-close-parentheses): { ‚ğ“ü—Í‚µ‚½‚Æ‚«‚Ì“®ì‚ğ•ÏXB
-	  - ˆÈ‰º‚ÌêŠ‚ÉƒJ[ƒ\ƒ‹‚ğˆÚ“®‚·‚é‚æ‚¤‚É‚µ‚½B
-	    n.times{¡
+	* (xtal-electric-insert-close-parentheses): { ã‚’å…¥åŠ›ã—ãŸã¨ãã®å‹•ä½œã‚’å¤‰æ›´ã€‚
+	  - ä»¥ä¸‹ã®å ´æ‰€ã«ã‚«ãƒ¼ã‚½ãƒ«ã‚’ç§»å‹•ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	    n.times{â– 
 	    }
-	    ˆÈ‘O‚Í‚±‚±‚¾‚Á‚½‚¯‚ÇAblock parameter ‚ğ‚Æ‚éê‡‚É–Ê“|‚È‚Ì‚ÅC³B
+	    ä»¥å‰ã¯ã“ã“ã ã£ãŸã‘ã©ã€block parameter ã‚’ã¨ã‚‹å ´åˆã«é¢å€’ãªã®ã§ä¿®æ­£ã€‚
 	    n.times{
-	        ¡
+	        â– 
 	    }
-	  - ‘Î‰‚·‚é•Â‚¶Š‡ŒÊ‚ª‚ ‚èAƒCƒ“ƒfƒ“ƒgƒŒƒxƒ‹‚ª“¯‚¶‚È‚ç•Â‚¶Š‡ŒÊ‚ğ‘}“ü‚µ‚È‚¢‚æ‚¤‚É‚µ‚½B
+	  - å¯¾å¿œã™ã‚‹é–‰ã˜æ‹¬å¼§ãŒã‚ã‚Šã€ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆãƒ¬ãƒ™ãƒ«ãŒåŒã˜ãªã‚‰é–‰ã˜æ‹¬å¼§ã‚’æŒ¿å…¥ã—ãªã„ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (matched-close-parentheses-exist-p): ƒCƒ“ƒfƒ“ƒgƒŒƒxƒ‹‚ª“¯‚¶‚È‘Î‰‚·‚é•Â‚¶Š‡ŒÊ‚ª‚ ‚é‚È‚ç t
+	* (matched-close-parentheses-exist-p): ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆãƒ¬ãƒ™ãƒ«ãŒåŒã˜ãªå¯¾å¿œã™ã‚‹é–‰ã˜æ‹¬å¼§ãŒã‚ã‚‹ãªã‚‰ t
 
 2007-09-10  MIYAMUKO Katsuyuki
 
@@ -54,69 +54,69 @@
 
 2007-09-09  MIYAMUKO Katsuyuki
 
-	* (xtal-electric-string): " ‚ğ˜A‘±‚µ‚Ä 2 ‰ñ“ü—Í‚·‚é‚Æ """ ’S‚Á‚Ä‚µ‚Ü‚¤–â‘è‚ğC³
+	* (xtal-electric-string): " ã‚’é€£ç¶šã—ã¦ 2 å›å…¥åŠ›ã™ã‚‹ã¨ """ æ‹…ã£ã¦ã—ã¾ã†å•é¡Œã‚’ä¿®æ­£
 
-	* (*xtal-electric-insert-close-string*): xtal-electric-string ‚Ì§Œä
-	  (xtal-electric-string): *xtal-electric-insert-close-string* ‚ª t ‚Ì‚Æ‚«‚Ì‚İ•Â‚¶‚éB
+	* (*xtal-electric-insert-close-string*): xtal-electric-string ã®åˆ¶å¾¡
+	  (xtal-electric-string): *xtal-electric-insert-close-string* ãŒ t ã®ã¨ãã®ã¿é–‰ã˜ã‚‹ã€‚
 
-	* (xtal-electric-string): •¶š—ñ‚ğ©“®‚Å•Â‚¶‚é‚æ‚¤‚É‚µ‚½B
+	* (xtal-electric-string): æ–‡å­—åˆ—ã‚’è‡ªå‹•ã§é–‰ã˜ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 	* - (xtal-electric-insert-close-parentheses): revert 1647
-	    Šù‚É•Â‚¶Š‡ŒÊ‚ª‚ ‚éê‡‚Å‚àí‚É•Â‚¶‚éB
-	    ˆÈ‰º‚Ì‚æ‚¤‚É‚È‚é‚Ì‚ğ–h‚®‚½‚ßB
+	    æ—¢ã«é–‰ã˜æ‹¬å¼§ãŒã‚ã‚‹å ´åˆã§ã‚‚å¸¸ã«é–‰ã˜ã‚‹ã€‚
+	    ä»¥ä¸‹ã®ã‚ˆã†ã«ãªã‚‹ã®ã‚’é˜²ããŸã‚ã€‚
 	    foo {
 	      if {
 	    }
-	    Š‡ŒÊ‚Ì‘Î‰‚ğŒ©‚Äƒoƒ“ƒ‰ƒ“ƒX‚µ‚Ä‚¢‚È‚¢‚Ì‚È‚ç‘}“ü‚·‚ê‚Î‚¢‚¯‚é‚ªA
-	    ‘S‘Ì‚Ìƒoƒ‰ƒ“ƒX‚ğŒ©‚È‚¢‚Æ‘Ê–ÚB–Ê“|‚È‚Ì‚Åí‚É‘}“ü‚·‚éB
+	    æ‹¬å¼§ã®å¯¾å¿œã‚’è¦‹ã¦ãƒãƒ³ãƒ©ãƒ³ã‚¹ã—ã¦ã„ãªã„ã®ãªã‚‰æŒ¿å…¥ã™ã‚Œã°ã„ã‘ã‚‹ãŒã€
+	    å…¨ä½“ã®ãƒãƒ©ãƒ³ã‚¹ã‚’è¦‹ãªã„ã¨é§„ç›®ã€‚é¢å€’ãªã®ã§å¸¸ã«æŒ¿å…¥ã™ã‚‹ã€‚
 
-	* - (xtal-electric-insert): ŠJ‚«Š‡ŒÊ‚ğ“ü—Í‚µ“_‚ÅŒã‚ë‚É‰½‚©‚ ‚ê‚Î©“®‘}“ü‚Í‚µ‚È‚¢B
-	    1 + 2  ‘S‘Ì‚ğ () ‚Å‚­‚­‚è‚½‚¢‚Æ‚«‚ÉŸè‚É•Â‚¶‚ç‚ê‚é‚Æ¢‚éB
-	  - (xtal-electric-insert-close-parentheses): Šù‚É•Â‚¶Š‡ŒÊ‚ª‚ ‚éê‡‚Í‚È‚É‚à‚µ‚È‚¢B
+	* - (xtal-electric-insert): é–‹ãæ‹¬å¼§ã‚’å…¥åŠ›ã—æ™‚ç‚¹ã§å¾Œã‚ã«ä½•ã‹ã‚ã‚Œã°è‡ªå‹•æŒ¿å…¥ã¯ã—ãªã„ã€‚
+	    1 + 2  å…¨ä½“ã‚’ () ã§ããã‚ŠãŸã„ã¨ãã«å‹æ‰‹ã«é–‰ã˜ã‚‰ã‚Œã‚‹ã¨å›°ã‚‹ã€‚
+	  - (xtal-electric-insert-close-parentheses): æ—¢ã«é–‰ã˜æ‹¬å¼§ãŒã‚ã‚‹å ´åˆã¯ãªã«ã‚‚ã—ãªã„ã€‚
 
-	* (*xtal-electric-insert-close-parentheses*): •Â‚¶Š‡ŒÊ‚Ì‘}“ü‚ğ§Œä‚·‚é
-	  (xtal-electric-insert, xtal-electric-close): *xtal-electric-insert-close-parentheses* ‚ª t ‚Ìê‡‚Ì‚İ•Â‚¶Š‡ŒÊ‚ğ‘}“ü
+	* (*xtal-electric-insert-close-parentheses*): é–‰ã˜æ‹¬å¼§ã®æŒ¿å…¥ã‚’åˆ¶å¾¡ã™ã‚‹
+	  (xtal-electric-insert, xtal-electric-close): *xtal-electric-insert-close-parentheses* ãŒ t ã®å ´åˆã®ã¿é–‰ã˜æ‹¬å¼§ã‚’æŒ¿å…¥
 
-	* (xtal-electric-insert): ‘Î‰‚·‚é•Â‚¶Š‡ŒÊ‚ğ©“®“I‚É‘}“ü‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (xtal-electric-insert): å¯¾å¿œã™ã‚‹é–‰ã˜æ‹¬å¼§ã‚’è‡ªå‹•çš„ã«æŒ¿å…¥ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 	  (xtal-electric-close): ditto.
 
-	* (xtal-current-statement-points): s“ªEs––‚ÅÀs‚µ‚½‚Æ‚«‚É•Ï‚¾‚Á‚½‚Ì‚ğC³
+	* (xtal-current-statement-points): è¡Œé ­ãƒ»è¡Œæœ«ã§å®Ÿè¡Œã—ãŸã¨ãã«å¤‰ã ã£ãŸã®ã‚’ä¿®æ­£
 	  (xtal-transpose-statement): ditto
 
-	* ŒÃ‚¢ ix ‚ğg‚Á‚½ê‡‚Éƒvƒƒ“ƒvƒg‘Ò‚¿‚ÅŒÅ‚Ü‚ç‚È‚¢‚æ‚¤‚ÉC³
-	  - (ix-push-line-exist?): save ‚µ‚½ƒRƒ}ƒ“ƒh‚ª‘¶İ‚·‚é‚È‚ç t
-	  - (ix-wait-for-prompt): timeout ‚É 2 •b‚É•ÏX
-	  - (ix-send-input): save ‚µ‚½ƒRƒ}ƒ“ƒh‚ª‘¶İ‚·‚éê‡‚Ì‚İƒvƒƒ“ƒvƒg‚ğ‘Ò‚¿‡‚í‚¹
-	  - (*ix-send-input-guard*): ‚¢‚ç‚È‚¢•Ï”‚ğíœ
+	* å¤ã„ ix ã‚’ä½¿ã£ãŸå ´åˆã«ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆå¾…ã¡ã§å›ºã¾ã‚‰ãªã„ã‚ˆã†ã«ä¿®æ­£
+	  - (ix-push-line-exist?): save ã—ãŸã‚³ãƒãƒ³ãƒ‰ãŒå­˜åœ¨ã™ã‚‹ãªã‚‰ t
+	  - (ix-wait-for-prompt): timeout ã« 2 ç§’ã«å¤‰æ›´
+	  - (ix-send-input): save ã—ãŸã‚³ãƒãƒ³ãƒ‰ãŒå­˜åœ¨ã™ã‚‹å ´åˆã®ã¿ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã‚’å¾…ã¡åˆã‚ã›
+	  - (*ix-send-input-guard*): ã„ã‚‰ãªã„å¤‰æ•°ã‚’å‰Šé™¤
 
-	* - 0.0.3 ‚Å’Ç‰Á‚µ‚½ƒRƒ}ƒ“ƒh‚Ìà–¾‚ğ’Ç‰ÁB
-	  - ix-mode ‚Ìà–¾‚ğ’Ç‰ÁB
+	* - 0.0.3 ã§è¿½åŠ ã—ãŸã‚³ãƒãƒ³ãƒ‰ã®èª¬æ˜ã‚’è¿½åŠ ã€‚
+	  - ix-mode ã®èª¬æ˜ã‚’è¿½åŠ ã€‚
 
-	* (*xtal-ix-buffer-name*): ix ‚Ìƒoƒbƒtƒ@–¼‚ğİ’è‰Â”\‚É‚µ‚½B
+	* (*xtal-ix-buffer-name*): ix ã®ãƒãƒƒãƒ•ã‚¡åã‚’è¨­å®šå¯èƒ½ã«ã—ãŸã€‚
 
-	* (xtal-mode): mode name •ÏX: xtal => Xtal.
+	* (xtal-mode): mode name å¤‰æ›´: xtal => Xtal.
 
 	* - Bumped version number to 0.0.3
-	  - mail address, url ‚ğC³
+	  - mail address, url ã‚’ä¿®æ­£
 
-	* (xtal-current-scope-level): ) ‚Íˆµ‚í‚È‚¢‚æ‚¤‚É‚µ‚½B
+	* (xtal-current-scope-level): ) ã¯æ‰±ã‚ãªã„ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (scan-xtal-syntax): match-data ‚ğ•Û‘¶
-	  (xtal-current-scope-level): ) ‚ğ skipB
+	* (scan-xtal-syntax): match-data ã‚’ä¿å­˜
+	  (xtal-current-scope-level): ) ã‚’ skipã€‚
 	  (scan-eos-forward, scan-eos-backward): ditto.
-	  (xtal-current-statement-points): workaround ‚ğ revert (svn merge -r1555:1552 outline.l)
-	  ˆÈ‰º‚ÌƒoƒO‚ğC³B
-	  - C-M-f ‚Å ); ‚ÉˆÚ“®‚µ‚Ä‚µ‚Ü‚¤
-	  - ÅŒã‚Ì ); ‚ªƒ}[ƒN‚Å‚«‚È‚¢ (‚Æ‚è‚ ‚¦‚¸’¼‚µ‚½)
+	  (xtal-current-statement-points): workaround ã‚’ revert (svn merge -r1555:1552 outline.l)
+	  ä»¥ä¸‹ã®ãƒã‚°ã‚’ä¿®æ­£ã€‚
+	  - C-M-f ã§ ); ã«ç§»å‹•ã—ã¦ã—ã¾ã†
+	  - æœ€å¾Œã® ); ãŒãƒãƒ¼ã‚¯ã§ããªã„ (ã¨ã‚Šã‚ãˆãšç›´ã—ãŸ)
 	          return expr.zip(rest.each).reduce(first, fun(r, pair) {
-	              // this.("and") ‚Å and ƒƒ\ƒbƒh‚ªæ“¾‚Å‚«‚é
+	              // this.("and") ã§ and ãƒ¡ã‚½ãƒƒãƒ‰ãŒå–å¾—ã§ãã‚‹
 	              return this.(pair[0])(r, pair[1]);
 	          });
-	  - C-M-f ‚Å }) ‚Ì ) ‚ÉˆÚ“®‚µ‚Ä‚µ‚Ü‚¤
-	  - (fun ‚ğƒ}[ƒN‚·‚é‚Æ } ‚Ü‚Å‚µ‚©ƒ}[ƒN‚³‚ê‚È‚¢ i‚Æ‚è‚ ‚¦‚¸’¼‚µ‚½)
+	  - C-M-f ã§ }) ã® ) ã«ç§»å‹•ã—ã¦ã—ã¾ã†
+	  - (fun ã‚’ãƒãƒ¼ã‚¯ã™ã‚‹ã¨ } ã¾ã§ã—ã‹ãƒãƒ¼ã‚¯ã•ã‚Œãªã„ ï¼ˆã¨ã‚Šã‚ãˆãšç›´ã—ãŸ)
 	          (fun (acc, rest) {
 	          })([], []);
-	  - up ‚·‚é‚Æ for ‚Ì’†‚És‚­
+	  - up ã™ã‚‹ã¨ for ã®ä¸­ã«è¡Œã
 	          return fiber{
 	              for(i: 0; i<_gen; ++i){
 	                  sx, sy: supershape(_n, _m1, _m2, _m3, _phi);
@@ -127,109 +127,109 @@
 	              }
 	          }
 
-	* (ix): process ƒK“®ì’†‚Å‚à ix-mode ‚ÍÀs‚·‚é‚æ‚¤‚É‚µ‚½Btext-mode ‚È‚Ç‚É•Ï‚¦‚Ä‚¢‚Ä‚à•œ‹A‚Å‚«‚é‚æ‚¤‚É
+	* (ix): process ã‚¬å‹•ä½œä¸­ã§ã‚‚ ix-mode ã¯å®Ÿè¡Œã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚text-mode ãªã©ã«å¤‰ãˆã¦ã„ã¦ã‚‚å¾©å¸°ã§ãã‚‹ã‚ˆã†ã«
 
-	* (setup-process-buffer): :kill nil ‚ªw’è‚³‚ê‚½ê‡‚Í kill ‚µ‚È‚¢
-	  (buffer-process-running?): w’è‚³‚ê‚½ƒoƒbƒtƒ@‚ÅƒvƒƒZƒX‚ª“®‚¢‚Ä‚¢‚ê‚Ît
+	* (setup-process-buffer): :kill nil ãŒæŒ‡å®šã•ã‚ŒãŸå ´åˆã¯ kill ã—ãªã„
+	  (buffer-process-running?): æŒ‡å®šã•ã‚ŒãŸãƒãƒƒãƒ•ã‚¡ã§ãƒ—ãƒ­ã‚»ã‚¹ãŒå‹•ã„ã¦ã„ã‚Œã°t
 
-	* (ix-mode): interactive ‚É‚µ‚Ä export
-	  (ix-previous-history-or-virtual-line): “ü—Ís‚Å‚È‚¢ê‡‚Í•’Ê‚ÉˆÚ“®‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (ix-mode): interactive ã«ã—ã¦ export
+	  (ix-previous-history-or-virtual-line): å…¥åŠ›è¡Œã§ãªã„å ´åˆã¯æ™®é€šã«ç§»å‹•ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 	  (ix-next-history-or-virtual-line): ditto.
 
-	* (marker-line-number): marker ‚ª nil ‚È‚ç -1 ‚ğ•Ô‚·
+	* (marker-line-number): marker ãŒ nil ãªã‚‰ -1 ã‚’è¿”ã™
 
-	* (wait-for-process-terminate): ƒ|[ƒŠƒ“ƒOŠÔŠu•ÏX: 0.2 => 0.1
+	* (wait-for-process-terminate): ãƒãƒ¼ãƒªãƒ³ã‚°é–“éš”å¤‰æ›´: 0.2 => 0.1
 
-	* (ix-send-input0): ‰ß‹‚ÌƒRƒ}ƒ“ƒhƒ‰ƒCƒ“‚ğÀs‚µ‚½‚Æ‚«‚ÍŒ»İs‚ğ push ‚µ‚Ä‚¨‚­B
+	* (ix-send-input0): éå»ã®ã‚³ãƒãƒ³ãƒ‰ãƒ©ã‚¤ãƒ³ã‚’å®Ÿè¡Œã—ãŸã¨ãã¯ç¾åœ¨è¡Œã‚’ push ã—ã¦ãŠãã€‚
 
 2007-09-08  MIYAMUKO Katsuyuki
 
-	* (ix-send-input0): ‰ß‹‚Ìƒvƒƒ“ƒvƒg‚ğƒRƒs[‚·‚é‚Ì‚ğ‚â‚ß‚ÄƒRƒ}ƒ“ƒh‚¾‚¯‚ÇƒRƒs[
+	* (ix-send-input0): éå»ã®ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã‚’ã‚³ãƒ”ãƒ¼ã™ã‚‹ã®ã‚’ã‚„ã‚ã¦ã‚³ãƒãƒ³ãƒ‰ã ã‘ã©ã‚³ãƒ”ãƒ¼
 
-	* (*xtal-ix-window-height*): ix window ‚Ì‚‚³
+	* (*xtal-ix-window-height*): ix window ã®é«˜ã•
 	  (ix): ditto.
-	  (ix-wait-for-prompt): ix ‚ªƒNƒ‰ƒbƒVƒ…‚µ‚½ê‡‚É”õ‚¦‚Ä proc ‚Ìó‘Ô‚ğí‚ÉŠm”F
-	  (ix-prompt-reset): ‘S•”Á‚·‚æ‚¤‚É‚µ‚½B
-	  (ix-history-previous): ÅŒã‚Ü‚Å‚³‚©‚Ì‚Ú‚Á‚½ê‡AÅŒã‚Ìƒ„ƒc‚ğ‚¸‚Á‚Æ•\¦
+	  (ix-wait-for-prompt): ix ãŒã‚¯ãƒ©ãƒƒã‚·ãƒ¥ã—ãŸå ´åˆã«å‚™ãˆã¦ proc ã®çŠ¶æ…‹ã‚’å¸¸ã«ç¢ºèª
+	  (ix-prompt-reset): å…¨éƒ¨æ¶ˆã™ã‚ˆã†ã«ã—ãŸã€‚
+	  (ix-history-previous): æœ€å¾Œã¾ã§ã•ã‹ã®ã¼ã£ãŸå ´åˆã€æœ€å¾Œã®ãƒ¤ãƒ„ã‚’ãšã£ã¨è¡¨ç¤º
 
 	* (ix-backward-delete-char-untabify-or-selection): DEL
-	  (ix-prompt-line-p): ƒvƒƒ“ƒvƒgs‚È‚ç t
-	  (ix-current-prompt-line-p): Œ»İ‚Ì“ü—Ís‚È‚ç t
+	  (ix-prompt-line-p): ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆè¡Œãªã‚‰ t
+	  (ix-current-prompt-line-p): ç¾åœ¨ã®å…¥åŠ›è¡Œãªã‚‰ t
 
-	* (ix-send-input0): ‰üs‚É‘O‚Ìs‚Ìs––‹ó”’‚ğíœB
+	* (ix-send-input0): æ”¹è¡Œæ™‚ã«å‰ã®è¡Œã®è¡Œæœ«ç©ºç™½ã‚’å‰Šé™¤ã€‚
 
-	* (ix-beginning-of-line-point-p): ƒvƒƒ“ƒvƒg‚ğ–³‹‚µ‚½ bolp
-	  (ix-beginning-of-line-point): ƒvƒƒ“ƒvƒg‚ğ–³‹‚µ‚½s“ª‚Ì point ‚ğ•Ô‚·
+	* (ix-beginning-of-line-point-p): ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã‚’ç„¡è¦–ã—ãŸ bolp
+	  (ix-beginning-of-line-point): ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã‚’ç„¡è¦–ã—ãŸè¡Œé ­ã® point ã‚’è¿”ã™
 	  (ix-beginning-of-line): rename from ix-goto-bol.
-	  (ix-backward-char): prompt ‚ğ–³‹‚·‚é backward-char
+	  (ix-backward-char): prompt ã‚’ç„¡è¦–ã™ã‚‹ backward-char
 
-	* (ix-forward-prompt): s“ª‚Å ix-forward-prompt ‚µ‚½‚Æ‚«‚ÍŸ‚ÌsˆÈ~‚Ìƒvƒƒ“ƒvƒg‚ÉˆÚ“®‚·‚×‚«
+	* (ix-forward-prompt): è¡Œé ­ã§ ix-forward-prompt ã—ãŸã¨ãã¯æ¬¡ã®è¡Œä»¥é™ã®ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã«ç§»å‹•ã™ã¹ã
 
-	* (ix-forward-prompt, ix-backward-prompt): ‘OŒã‚Ìƒvƒƒ“ƒvƒg‚ÉˆÚ“®
+	* (ix-forward-prompt, ix-backward-prompt): å‰å¾Œã®ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã«ç§»å‹•
 
-	* (*ix-mode-hook*): ix-kill-buffer ‚ÌƒL[‚ğ C-c 0 ‚É‚µ‚½B
+	* (*ix-mode-hook*): ix-kill-buffer ã®ã‚­ãƒ¼ã‚’ C-c 0 ã«ã—ãŸã€‚
 
-	* (define-xtal-specific-mode-map): ix ‚ğ C-c 1 ‚ÉAix-console ‚ğ C-c ! ‚É‚µ‚½B
+	* (define-xtal-specific-mode-map): ix ã‚’ C-c 1 ã«ã€ix-console ã‚’ C-c ! ã«ã—ãŸã€‚
 
 	* (*ix-prompt-regexp-color*): export.
 
 	* (ix-console): rename from xtal-run-ix-console.
-	  (ix): C-c C-i ‚ÉŠ„‚è“–‚Ä
+	  (ix): C-c C-i ã«å‰²ã‚Šå½“ã¦
 
-	* (xtal-run-with-current-buffer, xtal-save-buffer-if-need): ƒtƒ@ƒCƒ‹‚ª•Û‘¶‚³‚ê‚Ä‚¢‚È‚¯‚ê‚ÎŸè‚É•Û‘¶
-	  (buffer->filename, create-temp-buffer-file): utils.l ‚©‚ç buffer.l ‚ÉˆÚ“®
+	* (xtal-run-with-current-buffer, xtal-save-buffer-if-need): ãƒ•ã‚¡ã‚¤ãƒ«ãŒä¿å­˜ã•ã‚Œã¦ã„ãªã‘ã‚Œã°å‹æ‰‹ã«ä¿å­˜
+	  (buffer->filename, create-temp-buffer-file): utils.l ã‹ã‚‰ buffer.l ã«ç§»å‹•
 
-	* (ix-kill-buffer): window ‚à•Â‚¶‚é‚æ‚¤‚É‚µ‚½B
+	* (ix-kill-buffer): window ã‚‚é–‰ã˜ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (delete-buffer-and-window): xtal-close-output-buffer ‚©‚ç’ŠoB
+	* (delete-buffer-and-window): xtal-close-output-buffer ã‹ã‚‰æŠ½å‡ºã€‚
 	  (xtal-close-output-buffer): call delete-buffer-and-window
 
-	* (ix): window ‚ğ•ªŠ„‚µ‚Ä•\¦
+	* (ix): window ã‚’åˆ†å‰²ã—ã¦è¡¨ç¤º
 
-	* (setup-process-buffer): ix —p‚É‹¤’Ê•”•ª‚ğ’Šo
+	* (setup-process-buffer): ix ç”¨ã«å…±é€šéƒ¨åˆ†ã‚’æŠ½å‡º
 	  (popup-to-output-buffer): ditto
 
-	* (*xtal-regexp-keyword-list*): Ä—˜—p‰Â”\‚È‚æ‚¤‚É compiled-regexp-list ‚©‚ç list ‚É‚µ‚½B
-	  (xtal-mode-setup-keyword): *xtal-regexp-keyword-list* ‚ğ‚±‚±‚Å compile
-	  (*ix-prompt-regexp-color*): prompt ‚ÌF
-	  (ix-mode): *xtal-regexp-keyword-list* ‚É *ix-prompt-regexp* ‚ğ’Ç‰Á‚µ‚Ä³‹K•\Œ»ƒL[ƒ[ƒh‚ğİ’è
+	* (*xtal-regexp-keyword-list*): å†åˆ©ç”¨å¯èƒ½ãªã‚ˆã†ã« compiled-regexp-list ã‹ã‚‰ list ã«ã—ãŸã€‚
+	  (xtal-mode-setup-keyword): *xtal-regexp-keyword-list* ã‚’ã“ã“ã§ compile
+	  (*ix-prompt-regexp-color*): prompt ã®è‰²
+	  (ix-mode): *xtal-regexp-keyword-list* ã« *ix-prompt-regexp* ã‚’è¿½åŠ ã—ã¦æ­£è¦è¡¨ç¾ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’è¨­å®š
 
-	* (ix-goto-bol): ÅŒã‚Éo—Í‚µ‚½s‚È‚ç process marker ‚ÉˆÚ“®B
+	* (ix-goto-bol): æœ€å¾Œã«å‡ºåŠ›ã—ãŸè¡Œãªã‚‰ process marker ã«ç§»å‹•ã€‚
 
-	* (marker-line-number): ƒ}[ƒJ‚Ìs”Ô†‚ğ•Ô‚·B
+	* (marker-line-number): ãƒãƒ¼ã‚«ã®è¡Œç•ªå·ã‚’è¿”ã™ã€‚
 
-	* (ix-push-current-line): M-q ‚ÅŒ»İ‚Ìs‚ğ•Û‘¶
-	  (ix-pop-line-and-insert): M-q ‚Å•Û‘¶‚µ‚½s‚ğ‘}“üBix-send-input ‚ÌÅŒã‚ÅŒÄ‚Î‚ê‚é
-	  (ix-wait-for-prompt): ix ‚Ì prompt ‚ªo‚é‚Ü‚Å‘Ò‚¿‡‚í‚¹‚éBprocess-filter ‚Í’x‚·‚¬‚Äg‚¦‚È‚¢
-	  (ix-send-input): prompt ‚ªo‚½‚ç ix-pop-line-and-insert
-	  (make-ix-process): process.l ‚©‚ç ix-mode.l ‚ÉˆÚ“®
+	* (ix-push-current-line): M-q ã§ç¾åœ¨ã®è¡Œã‚’ä¿å­˜
+	  (ix-pop-line-and-insert): M-q ã§ä¿å­˜ã—ãŸè¡Œã‚’æŒ¿å…¥ã€‚ix-send-input ã®æœ€å¾Œã§å‘¼ã°ã‚Œã‚‹
+	  (ix-wait-for-prompt): ix ã® prompt ãŒå‡ºã‚‹ã¾ã§å¾…ã¡åˆã‚ã›ã‚‹ã€‚process-filter ã¯é…ã™ãã¦ä½¿ãˆãªã„
+	  (ix-send-input): prompt ãŒå‡ºãŸã‚‰ ix-pop-line-and-insert
+	  (make-ix-process): process.l ã‹ã‚‰ ix-mode.l ã«ç§»å‹•
 
-	* (timeout): timeout •t‚« loop
+	* (timeout): timeout ä»˜ã loop
 
 	* (buffer-substring-and-delete): buffer-substring + delete-region.
 
-	* (ix): ƒƒjƒ…[‚©‚çÀs‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
-	  (xtal-run-ix-console): process.l ‚©‚ç ix-mode.l ‚ÉˆÚ“®B
+	* (ix): ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‹ã‚‰å®Ÿè¡Œã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  (xtal-run-ix-console): process.l ã‹ã‚‰ ix-mode.l ã«ç§»å‹•ã€‚
 
-	* (wait-for-process-terminate): ƒvƒƒZƒX‚ªI—¹‚·‚é‚Ü‚Å‘Ò‚ÂB
-	  (with-runnning-process): process ‚ªÀs’†‚È‚ç body ‚ğÀs
+	* (wait-for-process-terminate): ãƒ—ãƒ­ã‚»ã‚¹ãŒçµ‚äº†ã™ã‚‹ã¾ã§å¾…ã¤ã€‚
+	  (with-runnning-process): process ãŒå®Ÿè¡Œä¸­ãªã‚‰ body ã‚’å®Ÿè¡Œ
 
-	* (bol-point): s“ª‚Ì point ‚ğ•Ô‚·B
-	  (eol-point): s––‚Ì point ‚ğ•Ô‚·B
+	* (bol-point): è¡Œé ­ã® point ã‚’è¿”ã™ã€‚
+	  (eol-point): è¡Œæœ«ã® point ã‚’è¿”ã™ã€‚
 
 	* (reset-command-history-index): rename from reset-command-history
 
-	* (ix-history-previous): —š—ğŒŸõ
+	* (ix-history-previous): å±¥æ­´æ¤œç´¢
 	  (ix-history-next): ditto
 
-	* (*ix-prompt-regexp*): ‹ó”’‚ğŠÜ‚Ü‚È‚¢‚æ‚¤‚É‚µ‚½
-	  (ix-goto-bol): prompt ‚Ìæ“ª‚ÉˆÚ“®‚·‚éB(C-a)
+	* (*ix-prompt-regexp*): ç©ºç™½ã‚’å«ã¾ãªã„ã‚ˆã†ã«ã—ãŸ
+	  (ix-goto-bol): prompt ã®å…ˆé ­ã«ç§»å‹•ã™ã‚‹ã€‚(C-a)
 
-	* (ix-mode): ix-mode ‚ÉƒL[ƒ[ƒh‚ÉF‚ğ•t‚¯‚é‚æ‚¤‚É‚µ‚½B
+	* (ix-mode): ix-mode æ™‚ã«ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã«è‰²ã‚’ä»˜ã‘ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (buffer-ix-mode-p): ix-mode ‚È‚ç t
-	  (ix-kill-buffer): ix ‚ğ~‚ß‚Ä‚©‚ç kill-buffer (C-c C-k)
-	  (ix-send-interrupt): ix ‚ÌI—¹‚ğ‘Ò‚¿‡‚í‚¹‚é‚æ‚¤‚É‚µ‚½B
+	* (buffer-ix-mode-p): ix-mode ãªã‚‰ t
+	  (ix-kill-buffer): ix ã‚’æ­¢ã‚ã¦ã‹ã‚‰ kill-buffer (C-c C-k)
+	  (ix-send-interrupt): ix ã®çµ‚äº†ã‚’å¾…ã¡åˆã‚ã›ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 	* add ix-mode.
 
@@ -238,58 +238,58 @@
 	* (*xtal-command-ix*): rename from *ix-exe*
 	  (*xtal-command-xtal*): rename from *xtal-exe*
 
-	* (xtal-run-ix-console): ix ‚ğŠO•”‚ÅÀs
+	* (xtal-run-ix-console): ix ã‚’å¤–éƒ¨ã§å®Ÿè¡Œ
 
-	* (xtal-workaround-insert-local-menu-again): buffer ‚ª xtal-mode ‚Ì‚Æ‚«‚Ì‚İƒƒjƒ…[‚ğİ’è
+	* (xtal-workaround-insert-local-menu-again): buffer ãŒ xtal-mode ã®ã¨ãã®ã¿ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’è¨­å®š
 
-	* ƒVƒ‡[ƒgƒJƒbƒg‚ª cmd ‚Æ explorer ‚Å‹t‚É‚È‚Á‚Ä‚½B
+	* ã‚·ãƒ§ãƒ¼ãƒˆã‚«ãƒƒãƒˆãŒ cmd ã¨ explorer ã§é€†ã«ãªã£ã¦ãŸã€‚
 
-	* (xtal-open-install-path-by-explorer): format ‚µ‚Ä‚¢‚È‚©‚Á‚½ƒGƒ‰[‚ğC³
+	* (xtal-open-install-path-by-explorer): format ã—ã¦ã„ãªã‹ã£ãŸã‚¨ãƒ©ãƒ¼ã‚’ä¿®æ­£
 
-	* (xtal-workaround-insert-local-menu-again): xtal-menu ‚ª current-menu “à‚É‘¶İ‚·‚éê‡‚Í‚È‚É‚à‚µ‚È‚¢B
+	* (xtal-workaround-insert-local-menu-again): xtal-menu ãŒ current-menu å†…ã«å­˜åœ¨ã™ã‚‹å ´åˆã¯ãªã«ã‚‚ã—ãªã„ã€‚
 
-	* - svn-mode ‚ªƒ[ƒJƒ‹ƒƒjƒ…[‚ğ–³‹‚µ‚Ä xtal-mode ‚Ìƒƒjƒ…[‚ª‚Â‚Ô‚³‚ê‚Ä‚µ‚Ü‚¤–â‘è‚Ì workaround.
+	* - svn-mode ãŒãƒ­ãƒ¼ã‚«ãƒ«ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’ç„¡è¦–ã—ã¦ xtal-mode ã®ãƒ¡ãƒ‹ãƒ¥ãƒ¼ãŒã¤ã¶ã•ã‚Œã¦ã—ã¾ã†å•é¡Œã® workaround.
 
-	* (xtal-open-install-path-by-command-prompt): Xtal ƒCƒ“ƒXƒg[ƒ‹ƒpƒX‚ğƒRƒ}ƒ“ƒhƒvƒƒ“ƒvƒg‚ÅŠJ‚­
-	  (xtal-open-install-path-by-explorer): Xtal ƒCƒ“ƒXƒg[ƒ‹ƒpƒX‚ğƒGƒNƒXƒvƒ[ƒ‰‚ÅŠJ‚­
+	* (xtal-open-install-path-by-command-prompt): Xtal ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ‘ã‚¹ã‚’ã‚³ãƒãƒ³ãƒ‰ãƒ—ãƒ­ãƒ³ãƒ—ãƒˆã§é–‹ã
+	  (xtal-open-install-path-by-explorer): Xtal ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ãƒ‘ã‚¹ã‚’ã‚¨ã‚¯ã‚¹ãƒ—ãƒ­ãƒ¼ãƒ©ã§é–‹ã
 
-	* - (*xtal-exe*): config.l ‚ÉˆÚ“®Bdefvar ‰»B
+	* - (*xtal-exe*): config.l ã«ç§»å‹•ã€‚defvar åŒ–ã€‚
 	  - (*ix-exe*): ditto.
-	  - path ‚©‚ñ‚ê‚ñ‚Ìˆ—‚ğ process.l ‚©‚ç path.l ‚ÉˆÚ“®
+	  - path ã‹ã‚“ã‚Œã‚“ã®å‡¦ç†ã‚’ process.l ã‹ã‚‰ path.l ã«ç§»å‹•
 
-	* (xtal-ensure-command): file-exist-p ‚ğŒÄ‚Ô‚Ì‚È‚ç valid-path ‚ğŒÄ‚Ô•K—v‚Í‚È‚¢
+	* (xtal-ensure-command): file-exist-p ã‚’å‘¼ã¶ã®ãªã‚‰ valid-path ã‚’å‘¼ã¶å¿…è¦ã¯ãªã„
 
-	* (*xtal-install-path-cache*): install path ‚ğƒLƒƒƒbƒVƒ…‚µ‚È‚¢‚æ‚¤‚É‚µ‚½B
+	* (*xtal-install-path-cache*): install path ã‚’ã‚­ãƒ£ãƒƒã‚·ãƒ¥ã—ãªã„ã‚ˆã†ã«ã—ãŸã€‚
 	  (xtal-install-path): ditto.
-	  (xtal-bin-path): xtal 0.9.7 higher ‚Å exe ‚ª bin ƒfƒBƒŒƒNƒgƒŠ‚É’u‚©‚ê‚é‚æ‚¤‚É‚È‚Á‚½‚Ì‚Å‘Î‰
+	  (xtal-bin-path): xtal 0.9.7 higher ã§ exe ãŒ bin ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«ç½®ã‹ã‚Œã‚‹ã‚ˆã†ã«ãªã£ãŸã®ã§å¯¾å¿œ
 
 2007-08-26  MIYAMUKO Katsuyuki
 
-	* - M-C-f, M-C-b ‚Í’×‚³‚È‚¢‚æ‚¤‚É‚µ‚½B
-	  - M-C-n, M-C-p ‚ğ xtal-xxx-statement ‚É‚µ‚½B
-	  - M-C-j, M-C-k ‚ğ xtal-xxx-statement-in-scope ‚É‚µ‚½B
+	* - M-C-f, M-C-b ã¯æ½°ã•ãªã„ã‚ˆã†ã«ã—ãŸã€‚
+	  - M-C-n, M-C-p ã‚’ xtal-xxx-statement ã«ã—ãŸã€‚
+	  - M-C-j, M-C-k ã‚’ xtal-xxx-statement-in-scope ã«ã—ãŸã€‚
 
-	* (xtal-transpose-statement): •¶‚Æ•¶‚ÌŠÔ‚Å‚Í‚È‚¢‚È‚çƒfƒtƒHƒ‹ƒg‚Ì transpose-sexps ‚ğŒÄ‚Ô
+	* (xtal-transpose-statement): æ–‡ã¨æ–‡ã®é–“ã§ã¯ãªã„ãªã‚‰ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã® transpose-sexps ã‚’å‘¼ã¶
 
-	* (xtal-current-statement-points):  (fun ‚ğƒ}[ƒN‚·‚é‚Æ } ‚Ü‚Å‚µ‚©ƒ}[ƒN‚³‚ê‚È‚¢
+	* (xtal-current-statement-points):  (fun ã‚’ãƒãƒ¼ã‚¯ã™ã‚‹ã¨ } ã¾ã§ã—ã‹ãƒãƒ¼ã‚¯ã•ã‚Œãªã„
 	    (fun (acc, rest) {
 	    })([], []);
 
 	* (fixup-calc-c-indent): fixed typo...
 
-	* (looking-eos-backward): () ‚àŒ©‚é‚æ‚¤‚É‚µ‚Ä‚İ‚½Bworkaround.
+	* (looking-eos-backward): () ã‚‚è¦‹ã‚‹ã‚ˆã†ã«ã—ã¦ã¿ãŸã€‚workaround.
 	  (looking-eos-forward): ditto.
-	  (xtal-current-statement-points): ˆÈ‰º‚Ì‚æ‚¤‚ÈƒP[ƒX‚Å ); ‚ªc‚Á‚Ä‚µ‚Ü‚¤‚±‚Æ‚É‘Î‚·‚é workaround
+	  (xtal-current-statement-points): ä»¥ä¸‹ã®ã‚ˆã†ãªã‚±ãƒ¼ã‚¹ã§ ); ãŒæ®‹ã£ã¦ã—ã¾ã†ã“ã¨ã«å¯¾ã™ã‚‹ workaround
 	    [1,2,3].inject(0, fun(acc,e) {
 	        e + acc;
 	    });
 
-	* (xtal-transpose-statement): if ‚Æ else if ‚ÉŠÖ‚µ‚Ä‚Í“Á•Ê‚É“ü‚ê‘Ö‚¦ˆ—‚ğ‚·‚é
+	* (xtal-transpose-statement): if ã¨ else if ã«é–¢ã—ã¦ã¯ç‰¹åˆ¥ã«å…¥ã‚Œæ›¿ãˆå‡¦ç†ã‚’ã™ã‚‹
 
-	* ƒJ[ƒ\ƒ‹ˆÚ“®Œn‚ÌƒRƒ}ƒ“ƒh‚ğƒƒjƒ…[‚Éİ’èB
-	  ƒJ[ƒ\ƒ‹ˆÚ“®Œn‚ÌƒRƒ}ƒ“ƒh‚ÉƒL[ƒ}ƒbƒv’è‹`B
+	* ã‚«ãƒ¼ã‚½ãƒ«ç§»å‹•ç³»ã®ã‚³ãƒãƒ³ãƒ‰ã‚’ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«è¨­å®šã€‚
+	  ã‚«ãƒ¼ã‚½ãƒ«ç§»å‹•ç³»ã®ã‚³ãƒãƒ³ãƒ‰ã«ã‚­ãƒ¼ãƒãƒƒãƒ—å®šç¾©ã€‚
 
-	* ˆÈ‰º‚ÌŠÖ”‚ğ export
+	* ä»¥ä¸‹ã®é–¢æ•°ã‚’ export
 	  xtal-forward-statement
 	  xtal-backward-statement
 	  xtal-forward-statement-in-scope
@@ -299,279 +299,279 @@
 	  xtal-up-statement
 	  xtal-down-statement
 
-	* (xtal-transpose-statement): ‘OŒã‚Ì•¶‚ğ“ü‚ê‘Ö‚¦‚éB
+	* (xtal-transpose-statement): å‰å¾Œã®æ–‡ã‚’å…¥ã‚Œæ›¿ãˆã‚‹ã€‚
 
-	* (xtal-current-statement-points): ƒJ[ƒ\ƒ‹‚ª‚ ‚é•¶‚ÌŠJn‚ÆI—¹ point ‚ğ‘½’l‚Å•Ô‚·B
-	  (xtal-mark-statement): ƒJ[ƒ\ƒ‹‚ª‚ ‚é•¶‚ğƒ}[ƒN‚·‚éB
+	* (xtal-current-statement-points): ã‚«ãƒ¼ã‚½ãƒ«ãŒã‚ã‚‹æ–‡ã®é–‹å§‹ã¨çµ‚äº† point ã‚’å¤šå€¤ã§è¿”ã™ã€‚
+	  (xtal-mark-statement): ã‚«ãƒ¼ã‚½ãƒ«ãŒã‚ã‚‹æ–‡ã‚’ãƒãƒ¼ã‚¯ã™ã‚‹ã€‚
 
 	* (xtal-down-statement): refactoring. rename variables.
 
-	* (xtal-down-statement): Œ»İ‚ÌƒXƒR[ƒv‚ÉƒlƒXƒg‚µ‚½ŠJ‚«Š‡ŒÊ“à‚ÉˆÚ“®‚·‚éB
+	* (xtal-down-statement): ç¾åœ¨ã®ã‚¹ã‚³ãƒ¼ãƒ—ã«ãƒã‚¹ãƒˆã—ãŸé–‹ãæ‹¬å¼§å†…ã«ç§»å‹•ã™ã‚‹ã€‚
 
-	* (xtal-current-scope-level): ƒŒƒxƒ‹‚Ì‚‚¢‡‚É‚È‚Á‚Ä‚¢‚é‚Ì‚Å reverse ‚·‚é•K—v‚Í‚È‚¢B
-	  (xtal-up-statement): ‚Ğ‚Æ‚Âã‚ÌƒXƒR[ƒv‚ÉˆÚ“®B
+	* (xtal-current-scope-level): ãƒ¬ãƒ™ãƒ«ã®é«˜ã„é †ã«ãªã£ã¦ã„ã‚‹ã®ã§ reverse ã™ã‚‹å¿…è¦ã¯ãªã„ã€‚
+	  (xtal-up-statement): ã²ã¨ã¤ä¸Šã®ã‚¹ã‚³ãƒ¼ãƒ—ã«ç§»å‹•ã€‚
 
-	* (xtal-current-scope-level): ƒgƒbƒvƒŒƒxƒ‹‚Ì point ‚¾‚¯‚Å‚Í‚È‚­‚·‚×‚Ä‚Ì { ‚Ì point ‚ğ•Ô‚·‚æ‚¤‚É‚µ‚½B
-	    Š®‘S‚É“¯‚¶ƒXƒR[ƒv‚©‚Ç‚¤‚©”»’f‚·‚é‚½‚ßB
-	  (xtal-forward-statement-in-scope): Š®‘S‚É“¯‚¶ƒXƒR[ƒv‚Ì“¯ƒŒƒxƒ‹‚ÌŸ‚Ì•¶‚ÉˆÚ“®‚·‚éB
-	  (xtal-backward-statement-in-scop): Š®‘S‚É“¯‚¶ƒXƒR[ƒv‚Ì“¯ƒŒƒxƒ‹‚Ì‘O‚Ì•¶‚ÉˆÚ“®‚·‚éB
-	  (xtal-move-statement-in-scope): ‹¤’ÊŠÖ”B
+	* (xtal-current-scope-level): ãƒˆãƒƒãƒ—ãƒ¬ãƒ™ãƒ«ã® point ã ã‘ã§ã¯ãªãã™ã¹ã¦ã® { ã® point ã‚’è¿”ã™ã‚ˆã†ã«ã—ãŸã€‚
+	    å®Œå…¨ã«åŒã˜ã‚¹ã‚³ãƒ¼ãƒ—ã‹ã©ã†ã‹åˆ¤æ–­ã™ã‚‹ãŸã‚ã€‚
+	  (xtal-forward-statement-in-scope): å®Œå…¨ã«åŒã˜ã‚¹ã‚³ãƒ¼ãƒ—ã®åŒãƒ¬ãƒ™ãƒ«ã®æ¬¡ã®æ–‡ã«ç§»å‹•ã™ã‚‹ã€‚
+	  (xtal-backward-statement-in-scop): å®Œå…¨ã«åŒã˜ã‚¹ã‚³ãƒ¼ãƒ—ã®åŒãƒ¬ãƒ™ãƒ«ã®å‰ã®æ–‡ã«ç§»å‹•ã™ã‚‹ã€‚
+	  (xtal-move-statement-in-scope): å…±é€šé–¢æ•°ã€‚
 
-	* (cursor-moved?): cursor-moved? block ‚ğì‚é‚æ‚¤‚É‚µ‚½B
-	  (scan-eos-backward): [{};]‚ğ’T‚·B
-	  (xtal-forward-statement-in-scope): Œó•â‚ª‚È‚¯‚ê‚ÎƒJ[ƒ\ƒ‹‚ğˆÚ“®‚µ‚È‚¢‚æ‚¤‚É‚µ‚½B
-	  (xtal-backward-statement): •¶‚ğŒã‚ë‚ÉˆÚ“®‚·‚éB
+	* (cursor-moved?): cursor-moved? block ã‚’ä½œã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  (scan-eos-backward): [{};]ã‚’æ¢ã™ã€‚
+	  (xtal-forward-statement-in-scope): å€™è£œãŒãªã‘ã‚Œã°ã‚«ãƒ¼ã‚½ãƒ«ã‚’ç§»å‹•ã—ãªã„ã‚ˆã†ã«ã—ãŸã€‚
+	  (xtal-backward-statement): æ–‡ã‚’å¾Œã‚ã«ç§»å‹•ã™ã‚‹ã€‚
 
 	* (*-sentence): => *-statement.
-	  (xtal-forward-statement): ƒtƒ@ƒCƒ‹‚Ìæ“ª‚ÅÀs‚·‚é‚Æ‚Ğ‚Æ‚Â”ò‚Î‚³‚ê‚Ä‚¢‚½‚Ì‚ğC³B
-	  (xtal-forward-statement-in-scope): “¯‚¶ƒXƒR[ƒv“à‚Å‚Ì‚İˆÚ“®‚·‚éB
-	  (xtal-current-scope-level): ƒXƒR[ƒv‚ÌƒlƒXƒg‚ÌƒŒƒxƒ‹‚ÆƒgƒbƒvƒŒƒxƒ‹‚Ì point ‚ğ•Ô‚·‚æ‚¤‚É‚µ‚½B
-	  (scan-eos-forward): [{};] ‚ğ’T‚·
+	  (xtal-forward-statement): ãƒ•ã‚¡ã‚¤ãƒ«ã®å…ˆé ­ã§å®Ÿè¡Œã™ã‚‹ã¨ã²ã¨ã¤é£›ã°ã•ã‚Œã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
+	  (xtal-forward-statement-in-scope): åŒã˜ã‚¹ã‚³ãƒ¼ãƒ—å†…ã§ã®ã¿ç§»å‹•ã™ã‚‹ã€‚
+	  (xtal-current-scope-level): ã‚¹ã‚³ãƒ¼ãƒ—ã®ãƒã‚¹ãƒˆã®ãƒ¬ãƒ™ãƒ«ã¨ãƒˆãƒƒãƒ—ãƒ¬ãƒ™ãƒ«ã® point ã‚’è¿”ã™ã‚ˆã†ã«ã—ãŸã€‚
+	  (scan-eos-forward): [{};] ã‚’æ¢ã™
 	  (looking-eos-backward): ditto
 	  (looking-eos-forward): ditto
-	  (skip-for-eos): ƒRƒƒ“ƒgA‹ó”’AƒuƒƒbƒNˆø”‚ğ–³‹B
+	  (skip-for-eos): ã‚³ãƒ¡ãƒ³ãƒˆã€ç©ºç™½ã€ãƒ–ãƒ­ãƒƒã‚¯å¼•æ•°ã‚’ç„¡è¦–ã€‚
 
-	* (xtal-forward-sentence): block parameter ‚ğ–³‹‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (xtal-forward-sentence): block parameter ã‚’ç„¡è¦–ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 	* (xtal-skip-white-spaces-or-comment-{backward|forward}): use xtal-skip-syntax-{backward,forward}
 
-	* (xtal-skip-syntax): w’è‚³‚ê‚½ˆø”‚É‘Î‰‚·‚éŠÖ”‚Ì‚¢‚¸‚ê‚©‚ª¬Œ÷‚·‚éŠÔ˜A‘±‚µ‚ÄŒÄ‚Ño‚·B
+	* (xtal-skip-syntax): æŒ‡å®šã•ã‚ŒãŸå¼•æ•°ã«å¯¾å¿œã™ã‚‹é–¢æ•°ã®ã„ãšã‚Œã‹ãŒæˆåŠŸã™ã‚‹é–“é€£ç¶šã—ã¦å‘¼ã³å‡ºã™ã€‚
 	  (xtal-skip-syntax-forward): ditto
 	  (xtal-skip-syntax-backward): ditto
 
-	* (make-string): ‚r®‚ÌƒŠƒXƒg‚©‚ç•¶š—ñ‚ğì¬
-	  (symbol-join): •¶š—ñ‚ğ join ‚µ‚ÄƒVƒ“ƒ{ƒ‹‚ğì¬
+	* (make-string): ï¼³å¼ã®ãƒªã‚¹ãƒˆã‹ã‚‰æ–‡å­—åˆ—ã‚’ä½œæˆ
+	  (symbol-join): æ–‡å­—åˆ—ã‚’ join ã—ã¦ã‚·ãƒ³ãƒœãƒ«ã‚’ä½œæˆ
 
-	* (skip-white-spaces-*): xtal- prefix ‚ğ•t‚¯‚½B
+	* (skip-white-spaces-*): xtal- prefix ã‚’ä»˜ã‘ãŸã€‚
 
-	* (skip-block-parameter-forward): |a,b| ‚ğƒXƒLƒbƒv‚·‚éB
+	* (skip-block-parameter-forward): |a,b| ã‚’ã‚¹ã‚­ãƒƒãƒ—ã™ã‚‹ã€‚
 	  (skip-block-parameter-backward): ditto
 	  (fixup-calc-c-indent): use skip-block-parameter-backward.
 
 2007-08-25  MIYAMUKO Katsuyuki
 
-	* (scan-xtal-syntax): parse-point-syntax ‚µ‚È‚ª‚ç scan-buffer ‚·‚éB
-	  (xtal-current-scope-level): Œ»İ‚Ì { ‚ÌƒlƒXƒgƒŒƒxƒ‹‚ğæ“¾‚·‚éB
-	  (xtal-forward-class-or-method): Ÿ‚ÌŠÖ”‚Ü‚½‚ÍƒNƒ‰ƒX‚ÉˆÚ“®‚·‚éBŒ»İ‚ÌƒXƒR[ƒv‚æ‚è[‚¢‚Ì‚Í–³‹‚·‚éB
-	  (xtal-forward-sentence): Ÿ‚Ì•¶‚ÉˆÚ“®‚·‚éBƒXƒR[ƒv‚ÌƒŒƒxƒ‹‚Í‹C‚É‚µ‚È‚¢B
-	  (scan-xtal-outline): *xtal-outline-regexp* ‚Å scan-buffer ‚·‚éƒ}ƒNƒB
+	* (scan-xtal-syntax): parse-point-syntax ã—ãªãŒã‚‰ scan-buffer ã™ã‚‹ã€‚
+	  (xtal-current-scope-level): ç¾åœ¨ã® { ã®ãƒã‚¹ãƒˆãƒ¬ãƒ™ãƒ«ã‚’å–å¾—ã™ã‚‹ã€‚
+	  (xtal-forward-class-or-method): æ¬¡ã®é–¢æ•°ã¾ãŸã¯ã‚¯ãƒ©ã‚¹ã«ç§»å‹•ã™ã‚‹ã€‚ç¾åœ¨ã®ã‚¹ã‚³ãƒ¼ãƒ—ã‚ˆã‚Šæ·±ã„ã®ã¯ç„¡è¦–ã™ã‚‹ã€‚
+	  (xtal-forward-sentence): æ¬¡ã®æ–‡ã«ç§»å‹•ã™ã‚‹ã€‚ã‚¹ã‚³ãƒ¼ãƒ—ã®ãƒ¬ãƒ™ãƒ«ã¯æ°—ã«ã—ãªã„ã€‚
+	  (scan-xtal-outline): *xtal-outline-regexp* ã§ scan-buffer ã™ã‚‹ãƒã‚¯ãƒ­ã€‚
 
-	* (xtal-skip-comment-forward): s“ª‚É•¶š—ñ‚ª‚ ‚é•”•ª‚ÅÀs‚·‚é‚Æ–³ŒÀƒ‹[ƒv‚É‚È‚Á‚Ä‚¢‚½‚Ì‚ğC³B
+	* (xtal-skip-comment-forward): è¡Œé ­ã«æ–‡å­—åˆ—ãŒã‚ã‚‹éƒ¨åˆ†ã§å®Ÿè¡Œã™ã‚‹ã¨ç„¡é™ãƒ«ãƒ¼ãƒ—ã«ãªã£ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* (save-current-point-only-if-fail): save-excursion ‚ğg‚¤‚Æ goto-matched-parenthies ‚ª‚È‚ñ‚©‚¤‚Ü‚­“®‚©‚È‚¢H
+	* (save-current-point-only-if-fail): save-excursion ã‚’ä½¿ã†ã¨ goto-matched-parenthies ãŒãªã‚“ã‹ã†ã¾ãå‹•ã‹ãªã„ï¼Ÿ
 
-	* (*xtal-regexp-keyword-list*): ... ‚ğ³‹K•\Œ»‚ÅƒL[ƒ[ƒh‚É‚µ‚½B
+	* (*xtal-regexp-keyword-list*): ... ã‚’æ­£è¦è¡¨ç¾ã§ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã«ã—ãŸã€‚
 
-	* (xtal-parse-point-syntax): ‘æ‚Qˆø”‚Å :string, :comment, :tag ˆÈŠO‚Ì‚Æ‚«‚É•Ô‚·’l‚ğw’è‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* (xtal-parse-point-syntax): ç¬¬ï¼’å¼•æ•°ã§ :string, :comment, :tag ä»¥å¤–ã®ã¨ãã«è¿”ã™å€¤ã‚’æŒ‡å®šã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (skip-regexp): save-current-point-only-if-fail ‚ğg‚¤‚æ‚¤‚É‚µ‚½B
+	* (skip-regexp): save-current-point-only-if-fail ã‚’ä½¿ã†ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (with-gensyms): gensym ‚·‚éƒ}ƒNƒB
-	  (save-current-point-only-if-fail): body ‚ª¸”s‚µ‚½‚ç point ‚ğ•œŒ³‚·‚éƒ}ƒNƒB
+	* (with-gensyms): gensym ã™ã‚‹ãƒã‚¯ãƒ­ã€‚
+	  (save-current-point-only-if-fail): body ãŒå¤±æ•—ã—ãŸã‚‰ point ã‚’å¾©å…ƒã™ã‚‹ãƒã‚¯ãƒ­ã€‚
 
 2007-08-16  MIYAMUKO Katsuyuki
 
-	* ˆêƒtƒ@ƒCƒ‹‚ÅÀs‚µ‚½ê‡‚Å‚à F10 ‚ÅŒ³‚Ìƒtƒ@ƒCƒ‹‚ğŠJ‚¯‚é‚æ‚¤‚É‚µ‚½B
-	  (xtal-fixup-temp-file): o—Íƒoƒbƒtƒ@“à‚Ì tempfile –¼‚ğ‘‚«Š·‚¦‚éB
-	  (xtal-process-sentinel-for-temp): tempfile —p‚Ì sentine. ƒtƒ@ƒCƒ‹‚Ìíœ‚Æ xtal-fixup-temp-file ‚ÌÀsB
-	  (xtal-setup-output-buffer): temp ƒtƒ@ƒCƒ‹‚Ìê‡‚Í xtal-process-sentinel-for-temp ‚ğ sentinel ‚Éİ’èB
+	* ä¸€æ™‚ãƒ•ã‚¡ã‚¤ãƒ«ã§å®Ÿè¡Œã—ãŸå ´åˆã§ã‚‚ F10 ã§å…ƒã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’é–‹ã‘ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  (xtal-fixup-temp-file): å‡ºåŠ›ãƒãƒƒãƒ•ã‚¡å†…ã® tempfile åã‚’æ›¸ãæ›ãˆã‚‹ã€‚
+	  (xtal-process-sentinel-for-temp): tempfile ç”¨ã® sentine. ãƒ•ã‚¡ã‚¤ãƒ«ã®å‰Šé™¤ã¨ xtal-fixup-temp-file ã®å®Ÿè¡Œã€‚
+	  (xtal-setup-output-buffer): temp ãƒ•ã‚¡ã‚¤ãƒ«ã®å ´åˆã¯ xtal-process-sentinel-for-temp ã‚’ sentinel ã«è¨­å®šã€‚
 
-	* (with-temporary-set-buffer): ˆê“I‚É set-buffer ‚·‚éƒ}ƒNƒB
-	  (set-local-variable): ‘æ‚Qˆø”‚Å buffer ‚ğæ‚é‚æ‚¤‚É‚µ‚½B
+	* (with-temporary-set-buffer): ä¸€æ™‚çš„ã« set-buffer ã™ã‚‹ãƒã‚¯ãƒ­ã€‚
+	  (set-local-variable): ç¬¬ï¼’å¼•æ•°ã§ buffer ã‚’å–ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (buffer->filename): tempfile ‚©‚Ç‚¤‚©‚ğ‘½’l‚Å•Ô‚·
+	* (buffer->filename): tempfile ã‹ã©ã†ã‹ã‚’å¤šå€¤ã§è¿”ã™
 
-	* (process-running?): process-status ‚ª :run ‚È‚ç t
-	  (xtal-kill-process): kill-process ‚Å‚Í cmd.exe ‚µ‚©€‚È‚È‚¢H xtal.exe ‚ªc‚é‚Ì‚Å kill-subprocess ‚É‚µ‚½B
-	  (xtal-close-output-buffer): ƒoƒbƒtƒ@‚ğ•Â‚¶‚é‘O‚ÉÀs’†‚ÌƒvƒƒZƒX‚ğE‚·‚æ‚¤‚É‚µ‚½B
+	* (process-running?): process-status ãŒ :run ãªã‚‰ t
+	  (xtal-kill-process): kill-process ã§ã¯ cmd.exe ã—ã‹æ­»ãªãªã„ï¼Ÿ xtal.exe ãŒæ®‹ã‚‹ã®ã§ kill-subprocess ã«ã—ãŸã€‚
+	  (xtal-close-output-buffer): ãƒãƒƒãƒ•ã‚¡ã‚’é–‰ã˜ã‚‹å‰ã«å®Ÿè¡Œä¸­ã®ãƒ—ãƒ­ã‚»ã‚¹ã‚’æ®ºã™ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (looking-regexp-forward): looking-at ‚Æ“¯‚¶B
-	  (looking-regexp-backward): looking-for ‚Ì³‹K•\Œ»”ÅB
+	* (looking-regexp-forward): looking-at ã¨åŒã˜ã€‚
+	  (looking-regexp-backward): looking-for ã®æ­£è¦è¡¨ç¾ç‰ˆã€‚
 
-	* (skip-regexp-backward): match data ‚ğ•Û‘¶‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (skip-regexp-backward): match data ã‚’ä¿å­˜ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 2007-08-14  MIYAMUKO Katsuyuki
 
 	* xtal-mode 0.0.2 released!
 
-	* (make-ix-process): ‚Æ‚è‚ ‚¦‚¸’Ç‰ÁB
+	* (make-ix-process): ã¨ã‚Šã‚ãˆãšè¿½åŠ ã€‚
 
-	* (xtal-add-bookmark-menu): ƒo[ƒWƒ‡ƒ“‚Ìã‚Éw’è‚³‚ê‚½ƒtƒ@ƒCƒ‹EURL ‚ğŠJ‚­ƒƒjƒ…[
-	  ‚ğ’Ç‰Á‚·‚éŠÖ”B
+	* (xtal-add-bookmark-menu): ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã®ä¸Šã«æŒ‡å®šã•ã‚ŒãŸãƒ•ã‚¡ã‚¤ãƒ«ãƒ»URL ã‚’é–‹ããƒ¡ãƒ‹ãƒ¥ãƒ¼
+	  ã‚’è¿½åŠ ã™ã‚‹é–¢æ•°ã€‚
 
-	* (xtal-define-popup-menu): :sep ‚Éƒ^ƒO‚ğ•t‚¯‚½Bƒ^ƒO‚ğƒL[ƒ[ƒh‚É‚µ‚½B
+	* (xtal-define-popup-menu): :sep ã«ã‚¿ã‚°ã‚’ä»˜ã‘ãŸã€‚ã‚¿ã‚°ã‚’ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã«ã—ãŸã€‚
 
-	* (*xtal-mode-map*, *xtal-syntax-table*): define-key ‚Æ‚©‚Å‚«‚é‚æ‚¤‚É
-	  require ‚µ‚½“_‚Å’è‹`‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (*xtal-mode-map*, *xtal-syntax-table*): define-key ã¨ã‹ã§ãã‚‹ã‚ˆã†ã«
+	  require ã—ãŸæ™‚ç‚¹ã§å®šç¾©ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* stdin, stdout, stderr ‚ğ’Ç‰Á
+	* stdin, stdout, stderr ã‚’è¿½åŠ 
 
-	* xtal 0.9.7.1 ‚ÌƒL[ƒ[ƒh‚ğ’Ç‰Á
+	* xtal 0.9.7.1 ã®ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ã‚’è¿½åŠ 
 
 2007-08-13  MIYAMUKO Katsuyuki
 
 	* xtal-mode 0.0.1 released!
 
-	* examples/fizzbuzz.xtal ‚ğ’Ç‰ÁB
+	* examples/fizzbuzz.xtal ã‚’è¿½åŠ ã€‚
 
-	* (xtal-close-output-buffer): window ‚ª 1 ‚µ‚©‚È‚¢ê‡‚ÉƒGƒ‰[‚É‚È‚Á‚Ä‚¢‚½‚Ì‚ğC³B
+	* (xtal-close-output-buffer): window ãŒ 1 ã—ã‹ãªã„å ´åˆã«ã‚¨ãƒ©ãƒ¼ã«ãªã£ã¦ã„ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* (xtal-install-path): ƒGƒ‰[ƒƒbƒZ[ƒW‚ª•s³‚¾‚Á‚½‚Ì‚ğC³B
-	  (xtal-ensure-command): ƒRƒ}ƒ“ƒh‚Ì‘¶İƒ`ƒFƒbƒNB
-	  (xtal-run-with-current-buffer): ƒRƒ}ƒ“ƒh‚ª‘¶İ‚·‚é‚©Šm”F‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (xtal-install-path): ã‚¨ãƒ©ãƒ¼ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ãŒä¸æ­£ã ã£ãŸã®ã‚’ä¿®æ­£ã€‚
+	  (xtal-ensure-command): ã‚³ãƒãƒ³ãƒ‰ã®å­˜åœ¨ãƒã‚§ãƒƒã‚¯ã€‚
+	  (xtal-run-with-current-buffer): ã‚³ãƒãƒ³ãƒ‰ãŒå­˜åœ¨ã™ã‚‹ã‹ç¢ºèªã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* export ‚Ì®—Aƒ†[ƒU‚ª’è‹`‚·‚é•Ï”‚ğ defvar ‚É‚µ‚½B
+	* export ã®æ•´ç†ã€ãƒ¦ãƒ¼ã‚¶ãŒå®šç¾©ã™ã‚‹å¤‰æ•°ã‚’ defvar ã«ã—ãŸã€‚
 
-	* (xtal-indent-buffer): ƒƒbƒZ[ƒW‚ğ•\¦B
-	  (xtal-smart-comment-indentation): Šù‚ÉƒCƒ“ƒfƒ“ƒg‚µ‚Ä‚¢‚éƒRƒƒ“ƒg’†‚Å‚³‚ç‚É
-	  TAB‚ğ‰Ÿ‚·‚Æ*‚ª‘B‚·‚é‚Ì‚ğC³B
+	* (xtal-indent-buffer): ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã€‚
+	  (xtal-smart-comment-indentation): æ—¢ã«ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã—ã¦ã„ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆä¸­ã§ã•ã‚‰ã«
+	  TABã‚’æŠ¼ã™ã¨*ãŒå¢—æ®–ã™ã‚‹ã®ã‚’ä¿®æ­£ã€‚
 
-	* xtal ‚Ö‚ÌŠÖ˜A•t‚¯‚Í ni-autoload ‚Å‚Ì‚İs‚¤BƒfƒtƒHƒ‹ƒg‚Å‚Í‚µ‚È‚¢B
+	* xtal ã¸ã®é–¢é€£ä»˜ã‘ã¯ ni-autoload ã§ã®ã¿è¡Œã†ã€‚ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã§ã¯ã—ãªã„ã€‚
 
-	* dofun ‚Íƒ^ƒO‚â list-function ‚Ì‘ÎÛ‚É‚µ‚È‚¢B
+	* dofun ã¯ã‚¿ã‚°ã‚„ list-function ã®å¯¾è±¡ã«ã—ãªã„ã€‚
 
-	* (xtal-build-summary-of-functions): ‚Ğ‚Æ‚Â‚à‚È‚¢‚Æ‚«‚Í error
-	  ‚É‚µ‚È‚¢‚ÆAlist-function “à‚ÅƒGƒ‰[‚É‚È‚Á‚Ä‚µ‚Ü‚¤B
+	* (xtal-build-summary-of-functions): ã²ã¨ã¤ã‚‚ãªã„ã¨ãã¯ error
+	  ã«ã—ãªã„ã¨ã€list-function å†…ã§ã‚¨ãƒ©ãƒ¼ã«ãªã£ã¦ã—ã¾ã†ã€‚
 
-	* ƒoƒCƒgƒRƒ“ƒpƒCƒ‹‚Å‚«‚È‚©‚Á‚½‚Ì‚ğC³B
+	* ãƒã‚¤ãƒˆã‚³ãƒ³ãƒ‘ã‚¤ãƒ«ã§ããªã‹ã£ãŸã®ã‚’ä¿®æ­£ã€‚
 
-	* xtal ‚ÌÀsŒ‹‰Êƒoƒbƒtƒ@‚É‚àƒƒjƒ…[‚ğ•t‚¯‚é
+	* xtal ã®å®Ÿè¡Œçµæœãƒãƒƒãƒ•ã‚¡ã«ã‚‚ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’ä»˜ã‘ã‚‹
 
-	* (*xtal-create-output-buffer-hook*): output buffer ‚ğì‚Á‚½‚Æ‚«‚ÉŒÄ‚Î‚ê‚éƒtƒbƒNB
-	  (*xtal-before-run-xtal-hook*): make-process ‘O‚ÉŒÄ‚Î‚ê‚éƒtƒbƒN
-	  (*xtal-run-xtal-hook*): make-process ‚Ì’¼Œã‚ÉŒÄ‚Î‚ê‚éƒtƒbƒN
-	  (*xtal-after-run-xtal-hook*): process ‚ªI—¹‚µ‚½‚Æ‚«‚ÉŒÄ‚Î‚ê‚éƒtƒbƒN
+	* (*xtal-create-output-buffer-hook*): output buffer ã‚’ä½œã£ãŸã¨ãã«å‘¼ã°ã‚Œã‚‹ãƒ•ãƒƒã‚¯ã€‚
+	  (*xtal-before-run-xtal-hook*): make-process å‰ã«å‘¼ã°ã‚Œã‚‹ãƒ•ãƒƒã‚¯
+	  (*xtal-run-xtal-hook*): make-process ã®ç›´å¾Œã«å‘¼ã°ã‚Œã‚‹ãƒ•ãƒƒã‚¯
+	  (*xtal-after-run-xtal-hook*): process ãŒçµ‚äº†ã—ãŸã¨ãã«å‘¼ã°ã‚Œã‚‹ãƒ•ãƒƒã‚¯
 	  (xtal-process-sentinel): process sentinel
-	  (xtal-setup-output-buffer): *xtal-create-output-buffer-hook* ƒtƒbƒN‚ğÀsB
-	  ƒRƒ}ƒ“ƒh‚ªÀs’†‚Ì‚Æ‚«‚É buffer ‚ª•Ï‚í‚Á‚Ä‚¢‚½‚Ì‚ğC³
-	  (xtal-run-with-current-buffer): *xtal-*-run-xtal-hook* ‚ğÀsn
+	  (xtal-setup-output-buffer): *xtal-create-output-buffer-hook* ãƒ•ãƒƒã‚¯ã‚’å®Ÿè¡Œã€‚
+	  ã‚³ãƒãƒ³ãƒ‰ãŒå®Ÿè¡Œä¸­ã®ã¨ãã« buffer ãŒå¤‰ã‚ã£ã¦ã„ãŸã®ã‚’ä¿®æ­£
+	  (xtal-run-with-current-buffer): *xtal-*-run-xtal-hook* ã‚’å®Ÿè¡Œn
 
-	* (xtal-close-output-buffer): window ‚ğ•\¦‚µ‚Ä‚¢‚éê‡•Â‚¶‚é‚æ‚¤‚É‚µ‚½B
+	* (xtal-close-output-buffer): window ã‚’è¡¨ç¤ºã—ã¦ã„ã‚‹å ´åˆé–‰ã˜ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* F10 ‚É xtal-first-error ‚ğ’è‹`B
+	* F10 ã« xtal-first-error ã‚’å®šç¾©ã€‚
 
-	* (find-xtal-output-buffer): xtal ‚ÌÀsƒoƒbƒtƒ@‚ğ•Ô‚·B
-	  (xtal-first-error): xtal ‚ÌÀsƒoƒbƒtƒ@‚ÉˆÚ‚Á‚Ä first-error ‚·‚éB
+	* (find-xtal-output-buffer): xtal ã®å®Ÿè¡Œãƒãƒƒãƒ•ã‚¡ã‚’è¿”ã™ã€‚
+	  (xtal-first-error): xtal ã®å®Ÿè¡Œãƒãƒƒãƒ•ã‚¡ã«ç§»ã£ã¦ first-error ã™ã‚‹ã€‚
 
-	* •Â‚¶ƒRƒƒ“ƒg‚ğ³‚µ‚­ŒŸo‚·‚é‚æ‚¤‚É‚µ‚½B
+	* é–‰ã˜ã‚³ãƒ¡ãƒ³ãƒˆã‚’æ­£ã—ãæ¤œå‡ºã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (*multi-line-comment-regexp*): /* ‚Æ */ ‚Éƒ}ƒbƒ`‚·‚é³‹K•\Œ»
-	  (goto-matched-multi-line-comment): ‘Î‰‚·‚éƒRƒƒ“ƒg‚ÌŠJnEI—¹‚ÉˆÚ“®‚·‚é
-	  (goto-beginning-of-multi-line-comment): /* ‚ÉˆÚ“®
-	  (goto-end-of-multi-line-comment): */ ‚ÉˆÚ“®
+	* (*multi-line-comment-regexp*): /* ã¨ */ ã«ãƒãƒƒãƒã™ã‚‹æ­£è¦è¡¨ç¾
+	  (goto-matched-multi-line-comment): å¯¾å¿œã™ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆã®é–‹å§‹ãƒ»çµ‚äº†ã«ç§»å‹•ã™ã‚‹
+	  (goto-beginning-of-multi-line-comment): /* ã«ç§»å‹•
+	  (goto-end-of-multi-line-comment): */ ã«ç§»å‹•
 	  (goto-multi-line-comment0): ditto
-	  (regexp-matched-point): ‘Î‰‚·‚é³‹K•\Œ»‚ÉˆÚ“®‚·‚éB
+	  (regexp-matched-point): å¯¾å¿œã™ã‚‹æ­£è¦è¡¨ç¾ã«ç§»å‹•ã™ã‚‹ã€‚
 
-	* (looking-around): ƒJ[ƒ\ƒ‹ü•Ó‚©‚çw’è‚³‚ê‚½•¶š—ñ‚ğ’T‚·B
-	  looking-for ‚Æ looking-back ‚ğ‚ ‚í‚¹‚½‚æ‚¤‚È‚à‚ÌB
+	* (looking-around): ã‚«ãƒ¼ã‚½ãƒ«å‘¨è¾ºã‹ã‚‰æŒ‡å®šã•ã‚ŒãŸæ–‡å­—åˆ—ã‚’æ¢ã™ã€‚
+	  looking-for ã¨ looking-back ã‚’ã‚ã‚ã›ãŸã‚ˆã†ãªã‚‚ã®ã€‚
 
-	* ƒRƒƒ“ƒg“à‚Å‚ÌƒCƒ“ƒfƒ“ƒg‚Å * ‚ğ•â³‚·‚é‚æ‚¤‚É‚µ‚½B
+	* ã‚³ãƒ¡ãƒ³ãƒˆå†…ã§ã®ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã§ * ã‚’è£œæ­£ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (insert-chars-if-not): w’è‚³‚ê‚½•¶š‚ª‘¶İ‚µ‚È‚¯‚ê‚Î insert
+	* (insert-chars-if-not): æŒ‡å®šã•ã‚ŒãŸæ–‡å­—ãŒå­˜åœ¨ã—ãªã‘ã‚Œã° insert
 
-	* command.l ‚ğíœBcommand ‚ÍŠeƒtƒ@ƒCƒ‹‚Å’è‹`‚·‚é‚æ‚¤‚É‚µ‚½B
+	* command.l ã‚’å‰Šé™¤ã€‚command ã¯å„ãƒ•ã‚¡ã‚¤ãƒ«ã§å®šç¾©ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
 2007-08-12  MIYAMUKO Katsuyuki
 
-	* (xtal-indent-buffer): ƒoƒbƒtƒ@‘S‘Ì‚ğƒCƒ“ƒfƒ“ƒgB
+	* (xtal-indent-buffer): ãƒãƒƒãƒ•ã‚¡å…¨ä½“ã‚’ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã€‚
 
-	* ˆÈ‰º‚ÌƒRƒ}ƒ“ƒh‚ğ’Ç‰ÁB
-	  - Œ»İs‚ğƒRƒƒ“ƒgƒAƒEƒg
-	  - Œ»İs‚ÌƒRƒƒ“ƒg‰ğœ
-	  - ƒRƒƒ“ƒg‚ğƒgƒOƒ‹
+	* ä»¥ä¸‹ã®ã‚³ãƒãƒ³ãƒ‰ã‚’è¿½åŠ ã€‚
+	  - ç¾åœ¨è¡Œã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆ
+	  - ç¾åœ¨è¡Œã®ã‚³ãƒ¡ãƒ³ãƒˆè§£é™¤
+	  - ã‚³ãƒ¡ãƒ³ãƒˆã‚’ãƒˆã‚°ãƒ«
 
 	* (with-narrowing): save-excursion -> save-restriction -> narrow-to-region
-	  ‚·‚éƒ}ƒNƒB
+	  ã™ã‚‹ãƒã‚¯ãƒ­ã€‚
 
-	* (current-line-point-values): Œ»İs‚ÌŠJn‚ÆI—¹ point ‚ğ‘½’l‚Å•Ô‚·B
-	  (current-line-points): Œ»İs‚ÌŠJn‚ÆI—¹ point ‚ğ list ‚Å•Ô‚·B
-	  (beginning-of-line-point): w’è‚³‚ê‚½ point s‚Ìæ“ª point ‚ğ•Ô‚·B
-	  (end-of-line-point): w’è‚³‚ê‚½ point s‚ÌI—¹ point ‚ğ•Ô‚·B
+	* (current-line-point-values): ç¾åœ¨è¡Œã®é–‹å§‹ã¨çµ‚äº† point ã‚’å¤šå€¤ã§è¿”ã™ã€‚
+	  (current-line-points): ç¾åœ¨è¡Œã®é–‹å§‹ã¨çµ‚äº† point ã‚’ list ã§è¿”ã™ã€‚
+	  (beginning-of-line-point): æŒ‡å®šã•ã‚ŒãŸ point è¡Œã®å…ˆé ­ point ã‚’è¿”ã™ã€‚
+	  (end-of-line-point): æŒ‡å®šã•ã‚ŒãŸ point è¡Œã®çµ‚äº† point ã‚’è¿”ã™ã€‚
 
 	* (current-line-points, with-current-line-points): new method.
 
-	* ƒL[ƒ[ƒhƒtƒ@ƒCƒ‹‚ÉƒNƒ‰ƒX‚Ìƒƒ\ƒbƒh‚ğ’Ç‰ÁB
+	* ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰ãƒ•ã‚¡ã‚¤ãƒ«ã«ã‚¯ãƒ©ã‚¹ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’è¿½åŠ ã€‚
 
-	* (xtal-setup-output-buffer): ƒRƒ}ƒ“ƒhÀs’†‚È‚ç‚Æ‚ß‚Ä‚©‚çÀs‚·‚é‚æ‚¤‚É‚µ‚½B
-	  (xtal-close-output-buffer): ’Ç‰ÁB
+	* (xtal-setup-output-buffer): ã‚³ãƒãƒ³ãƒ‰å®Ÿè¡Œä¸­ãªã‚‰ã¨ã‚ã¦ã‹ã‚‰å®Ÿè¡Œã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  (xtal-close-output-buffer): è¿½åŠ ã€‚
 
-	* Œp‘±s‚ğƒCƒ“ƒfƒ“ƒg‚·‚é‚æ‚¤‚É‚µ‚½B
+	* ç¶™ç¶šè¡Œã‚’ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* ƒuƒƒbƒNƒpƒ‰ƒ[ƒ^‚Â‚«‚ÌƒuƒƒbƒN‚ğ³‚µ‚­ƒCƒ“ƒfƒ“ƒg‚Å‚«‚é‚æ‚¤‚É‚µ‚½B
+	* ãƒ–ãƒ­ãƒƒã‚¯ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿ã¤ãã®ãƒ–ãƒ­ãƒƒã‚¯ã‚’æ­£ã—ãã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆã§ãã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 	  arr.each {|e|
 	  }
 
-	* (*xtal-comment-start-regexp*): ƒRƒƒ“ƒgŠJn³‹K•\Œ»
-	  (*xtal-comment-end-regexp*): ƒRƒƒ“ƒgI—¹³‹K•\Œ»
-	  (*xtal-comment-line-regexp*): ƒRƒƒ“ƒgs‚Ì³‹K•\Œ»
+	* (*xtal-comment-start-regexp*): ã‚³ãƒ¡ãƒ³ãƒˆé–‹å§‹æ­£è¦è¡¨ç¾
+	  (*xtal-comment-end-regexp*): ã‚³ãƒ¡ãƒ³ãƒˆçµ‚äº†æ­£è¦è¡¨ç¾
+	  (*xtal-comment-line-regexp*): ã‚³ãƒ¡ãƒ³ãƒˆè¡Œã®æ­£è¦è¡¨ç¾
 	  (xtal-in-shebang-comment-p): bug fix.
 	  (xtal-in-comment-p): ditto.
 	  (xtal-parse-point-syntax): dito.
 	  (xtal-comment-line-p): add.
-	  (xtal-skip-comment-forward): ˜A‘±‚·‚éƒRƒƒ“ƒg‚ğƒXƒLƒbƒv‚·‚é‚æ‚¤‚É‚µ‚½B
+	  (xtal-skip-comment-forward): é€£ç¶šã™ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆã‚’ã‚¹ã‚­ãƒƒãƒ—ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 	  (xtal-skip-comment-backward): ditto.
 	  (xtal-skip-comment): ditto.
-	  (skip-white-spaces-or-comment-forward): ˜A‘±‚·‚éƒRƒƒ“ƒg‚Æ‹ó”’‚ğƒXƒLƒbƒv
+	  (skip-white-spaces-or-comment-forward): é€£ç¶šã™ã‚‹ã‚³ãƒ¡ãƒ³ãƒˆã¨ç©ºç™½ã‚’ã‚¹ã‚­ãƒƒãƒ—
 	  (skip-white-spaces-or-comment-backward): ditto.
 
-	* (after-char=): ˆê•¶š‚ ‚Æ‚ğ’²‚×‚éB
-	  (skip-regexp-forward): ³‹K•\Œ»‚Éƒ}ƒbƒ`‚µ‚½•ª‚¾‚¯i‚ŞB
-	  (skip-regexp-backward): Å’Zƒ}ƒbƒ`‚É‚È‚Á‚Ä‚µ‚Ü‚¤‚Ì‚ğC³B
+	* (after-char=): ä¸€æ–‡å­—ã‚ã¨ã‚’èª¿ã¹ã‚‹ã€‚
+	  (skip-regexp-forward): æ­£è¦è¡¨ç¾ã«ãƒãƒƒãƒã—ãŸåˆ†ã ã‘é€²ã‚€ã€‚
+	  (skip-regexp-backward): æœ€çŸ­ãƒãƒƒãƒã«ãªã£ã¦ã—ã¾ã†ã®ã‚’ä¿®æ­£ã€‚
 
-	* (*xtal-block-parameter-regexp*): |ident,ident|‚Éƒ}ƒbƒ`‚·‚é³‹K•\Œ»
-	  (skip-white-spaces-forward): ‹ó”’–³‹
+	* (*xtal-block-parameter-regexp*): |ident,ident|ã«ãƒãƒƒãƒã™ã‚‹æ­£è¦è¡¨ç¾
+	  (skip-white-spaces-forward): ç©ºç™½ç„¡è¦–
 	  (skip-white-spaces-backward): ditto
-	  (skip-regexp-backward): ³‹K•\Œ»‚ÅƒXƒLƒbƒv
-	  (before-char=): ˆê‚Â‘O‚Ì•¶šƒ`ƒFƒbƒN
-	  (space-line-p): ‹ó”’s?
+	  (skip-regexp-backward): æ­£è¦è¡¨ç¾ã§ã‚¹ã‚­ãƒƒãƒ—
+	  (before-char=): ä¸€ã¤å‰ã®æ–‡å­—ãƒã‚§ãƒƒã‚¯
+	  (space-line-p): ç©ºç™½è¡Œ?
 
 	* (re-group, re-repeat-with): new regexp helper.
 
-	* (xtal-skip-comment): cursor-moved? ‚ğ—˜—pAƒXƒLƒbƒv‚·‚é³‹K•\Œ»‚ğw’è‚·‚é‚æ‚¤‚É‚µ‚½B
-	  (xtal-skip-comment-forward): */ or \n ‚Ü‚ÅƒXƒLƒbƒv‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (xtal-skip-comment): cursor-moved? ã‚’åˆ©ç”¨ã€ã‚¹ã‚­ãƒƒãƒ—ã™ã‚‹æ­£è¦è¡¨ç¾ã‚’æŒ‡å®šã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  (xtal-skip-comment-forward): */ or \n ã¾ã§ã‚¹ã‚­ãƒƒãƒ—ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* (cursor-moved?): body ‚ğÀs‚µ‚ÄƒJ[ƒ\ƒ‹‚ÌˆÊ’u‚ª•Ï‚í‚ê‚Î t
+	* (cursor-moved?): body ã‚’å®Ÿè¡Œã—ã¦ã‚«ãƒ¼ã‚½ãƒ«ã®ä½ç½®ãŒå¤‰ã‚ã‚Œã° t
 
-	* (narrow-to-line, current-line-eval, scan-line): ƒJ[ƒ\ƒ‹‚ÌˆÚ“®‚ğ§Œä‚·‚éˆø”‚ğ’Ç‰ÁB
+	* (narrow-to-line, current-line-eval, scan-line): ã‚«ãƒ¼ã‚½ãƒ«ã®ç§»å‹•ã‚’åˆ¶å¾¡ã™ã‚‹å¼•æ•°ã‚’è¿½åŠ ã€‚
 	  (looking-bol, current-line-indent): follow above changes.
 
-	* #! ƒRƒƒ“ƒg‚É‘Î‰B
+	* #! ã‚³ãƒ¡ãƒ³ãƒˆã«å¯¾å¿œã€‚
 
-	* (xtal-in-shebang-comment-p): #! ƒRƒƒ“ƒg‚©”»’f
-	  (xtal-in-comment-p): ƒRƒƒ“ƒg“àH
-	  (xtal-parse-point-syntax): #! ‘Î‰ parse-point-syntax
-	  (xtal-skip-comment-forward): ƒRƒƒ“ƒgŠO‚ÖˆÚ“®
+	* (xtal-in-shebang-comment-p): #! ã‚³ãƒ¡ãƒ³ãƒˆã‹åˆ¤æ–­
+	  (xtal-in-comment-p): ã‚³ãƒ¡ãƒ³ãƒˆå†…ï¼Ÿ
+	  (xtal-parse-point-syntax): #! å¯¾å¿œ parse-point-syntax
+	  (xtal-skip-comment-forward): ã‚³ãƒ¡ãƒ³ãƒˆå¤–ã¸ç§»å‹•
 	  (xtal-skip-comment-backward): ditto
 	  (xtal-skip-comment): ditto
 
-	* menu ‚Éƒ^ƒO‚ğ•t‚¯‚½
+	* menu ã«ã‚¿ã‚°ã‚’ä»˜ã‘ãŸ
 
 2007-08-11  MIYAMUKO Katsuyuki
 
-	* home url, online reference ‚ğŠJ‚­ƒƒjƒ…[‚ğ’Ç‰ÁB
+	* home url, online reference ã‚’é–‹ããƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’è¿½åŠ ã€‚
 
-	* (xtal-command-line): filename ‚ª nil ‚Ìê‡‚Í–³‹‚·‚é‚æ‚¤‚É‚µ‚½B
-	  •K—v‚È‚Æ‚«‚¾‚¯Aqutoe ‚·‚é‚æ‚¤‚É‚µ‚½B
+	* (xtal-command-line): filename ãŒ nil ã®å ´åˆã¯ç„¡è¦–ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
+	  å¿…è¦ãªã¨ãã ã‘ã€qutoe ã™ã‚‹ã‚ˆã†ã«ã—ãŸã€‚
 
-	* ƒJƒŒƒ“ƒgƒoƒbƒtƒ@‚ğ xtal ‚ÅÀs‚ğ’Ç‰ÁB
+	* ã‚«ãƒ¬ãƒ³ãƒˆãƒãƒƒãƒ•ã‚¡ã‚’ xtal ã§å®Ÿè¡Œã‚’è¿½åŠ ã€‚
 
-	* menu ‚©‚çƒo[ƒWƒ‡ƒ“•\¦‚É‘Î‰‚µ‚½B
+	* menu ã‹ã‚‰ãƒãƒ¼ã‚¸ãƒ§ãƒ³è¡¨ç¤ºã«å¯¾å¿œã—ãŸã€‚
 
-	* app menu ‚Å‚Í‚È‚­ local menu ‚Æ‚·‚×‚«B
+	* app menu ã§ã¯ãªã local menu ã¨ã™ã¹ãã€‚
 
-	* version.l ‚ğ’Ç‰Á
+	* version.l ã‚’è¿½åŠ 
 
-	* indent ‚ğ calc-c-indent ƒx[ƒX‚Å‘‚«’¼‚µB
+	* indent ã‚’ calc-c-indent ãƒ™ãƒ¼ã‚¹ã§æ›¸ãç›´ã—ã€‚
 
-	* ƒtƒ@ƒCƒ‹‚ğ•ªŠ„‚µ‚½B
+	* ãƒ•ã‚¡ã‚¤ãƒ«ã‚’åˆ†å‰²ã—ãŸã€‚
 
 2007-08-10  MIYAMUKO Katsuyuki
 
-	* ƒ^ƒOAlist-functionAindent ü‚è‚ğÀ‘•
+	* ã‚¿ã‚°ã€list-functionã€indent å‘¨ã‚Šã‚’å®Ÿè£…
 
-	* ƒL[ƒ[ƒh’è‹`
+	* ã‚­ãƒ¼ãƒ¯ãƒ¼ãƒ‰å®šç¾©
 
 2007-08-09  MIYAMUKO Katsuyuki
 
-	* xtal-mode ì¬ŠJn
+	* xtal-mode ä½œæˆé–‹å§‹
 
